@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const { generateToken } = require("../helper/jwt");
 
-const model = require("../moddels");
+const model = require("../models");
 
 const register = async (req, res) => {
   const {
