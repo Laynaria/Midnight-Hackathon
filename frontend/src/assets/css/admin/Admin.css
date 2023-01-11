@@ -1,5 +1,6 @@
 body {
   background-color: #dcdee2;
+  font-family: Montserrat, sans-serif;
 }
 
 .admin {
@@ -189,11 +190,6 @@ nav {
   font-weight: bold;
 }
 
-.enedisLogoCircle {
-  width: 20%;
-  margin-right: 0.7rem;
-}
-
 .navIcon {
   margin-right: 2rem;
   font-size: 1.2em;
@@ -228,13 +224,93 @@ main {
   width: 100%;
 }
 
-.content {
-  padding: 2rem 5vw;
+.adminContent {
+  padding: 1rem;
 }
 
-.content h1 {
-  font-size: 1.7em;
-  margin-bottom: 3rem;
+.kpiContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kpiContent1 {
+  width: 17rem;
+  height: 8rem;
+  background-color: #8bc95b;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpiContent2 {
+  width: 17rem;
+  height: 8rem;
+  background-color: #0b4c65;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpiContent3 {
+  width: 17rem;
+  height: 8rem;
+  background-color: #092936;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpiContent4 {
+  width: 17rem;
+  height: 8rem;
+  background-color: #2d2e34;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpiContent1Title {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: regular;
+}
+
+.kpiContent1Value {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableItem {
+  margin-top: 1.5rem;
+}
+
+.tableTitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0 1.5rem 1.5rem 0;
+}
+
+.tableContent {
+  width: 34.5rem;
+  height: 20rem;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .card {
