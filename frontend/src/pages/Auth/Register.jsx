@@ -15,6 +15,8 @@ export default function Register() {
     firstname: "",
     lastname: "",
     email: "",
+    address: "",
+    additional_address: "",
     phone: "",
     cellphone: "",
     zipcode: "",
@@ -73,6 +75,24 @@ export default function Register() {
               id="email"
               name="email"
               placeholder="Email*"
+              onChange={handleChange}
+            />
+          </label>
+          <label htmlFor="address">
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Address*"
+              onChange={handleChange}
+            />
+          </label>
+          <label htmlFor="additional_address">
+            <input
+              type="text"
+              id="additional_address"
+              name="additional_address"
+              placeholder="Additional Address Info"
               onChange={handleChange}
             />
           </label>
