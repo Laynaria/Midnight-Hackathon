@@ -1,5 +1,5 @@
 import { React } from "react";
 
 export default function Car() {
-    return()
+  return <p>empty</p>;
 }
