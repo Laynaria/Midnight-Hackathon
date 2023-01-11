@@ -12,8 +12,8 @@ const register = async (req, res) => {
     phone,
     cellphone,
     adress,
-    aditional_adress,
-    postal_code,
+    aditionalAdress,
+    postalCode,
     city,
   } = req.body;
 
@@ -34,8 +34,8 @@ const register = async (req, res) => {
     phone,
     cellphone,
     adress,
-    aditional_adress,
-    postal_code,
+    aditionalAdress,
+    postalCode,
     city,
   };
 
@@ -63,7 +63,7 @@ const login = async (req, res) => {
     .findUser(req.body)
     .then(([[user]]) => {
       if (!user) {
-        return res.statfffus(403).json({ error: "User not found" });
+        return res.status(403).json({ error: "User not found" });
       }
       // 2 vérifier le MDP
       const compare = bcrypt.compareSync(password, user.password);

@@ -23,8 +23,8 @@ class AuthManager extends AbstractManager {
         user.phone,
         user.cellphone,
         user.adress,
-        user.aditional_adress,
-        user.postal_code,
+        user.aditionalAdress,
+        user.postalCode,
         user.city,
       ]
     );
