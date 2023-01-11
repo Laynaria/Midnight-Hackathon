@@ -7,7 +7,7 @@ import Home from "@pages/Home";
 import Vehicles from "@pages/Vehicles";
 
 // Contact
-import Contact from "@pages/Companies/Contact";
+import Contact from "@pages/Contact";
 
 // Auth
 import Register from "@pages/Auth/Register";
