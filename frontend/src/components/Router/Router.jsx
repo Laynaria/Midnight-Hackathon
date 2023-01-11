@@ -13,6 +13,9 @@ import Contact from "@pages/Contact";
 import Register from "@pages/Auth/Register";
 import Login from "@pages/Auth/Login";
 
+// Admin
+import Dashboard from "@pages/Admin/Dashboard";
+
 export default function Router() {
   return (
     <BrowserRouter>
@@ -22,6 +25,7 @@ export default function Router() {
         <Route path="/login" element={<Login />} />
         <Route path="/vehicles" element={<Vehicles />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
