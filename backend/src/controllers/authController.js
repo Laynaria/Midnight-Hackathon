@@ -22,7 +22,7 @@ const register = async (req, res) => {
 const login = (req, res) => {
   // récuperer mon user de la bdd
   model
-    .findUser(req.body.email)
+    .findUser(req.body.mail)
     .then(([[user]]) => {
       if (!user) {
         return res.status(403).json({ error: "user not found" });
