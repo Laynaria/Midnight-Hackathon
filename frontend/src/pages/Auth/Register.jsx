@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+import AuthService from "@services/AuthService";
+
 import logo from "@assets/images/logov2.svg";
 import hide from "@assets/images/hide.svg";
 import show from "@assets/images/show.svg";
@@ -14,14 +16,14 @@ export default function Register() {
   const [registerObject, setRegisterObject] = useState({
     firstname: "",
     lastname: "",
-    email: "",
-    address: "",
-    additional_address: "",
+    mail: "",
+    password: "",
     phone: "",
     cellphone: "",
-    zipcode: "",
+    address: "",
+    additionalAddress: "",
+    postalCode: "",
     city: "",
-    password: "",
     confirm_password: "",
   });
 
@@ -34,9 +36,11 @@ export default function Register() {
   // function to send the form value to backend
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.warn(registerObject);
-    // add what is needed to send the state registerObject as a mail.
+    AuthService.register(registerObject).then((data) => {
+      console.warn(data);
+    });
   };
+
   return (
     <main className="register-main">
       <Link to="/login" className="back-arrow">
@@ -69,11 +73,11 @@ export default function Register() {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="email">
+          <label htmlFor="mail">
             <input
               type="email"
-              id="email"
-              name="email"
+              id="mail"
+              name="mail"
               placeholder="Email*"
               onChange={handleChange}
             />
@@ -87,11 +91,11 @@ export default function Register() {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="additional_address">
+          <label htmlFor="additionalAddress">
             <input
               type="text"
-              id="additional_address"
-              name="additional_address"
+              id="additionalAddress"
+              name="additionalAddress"
               placeholder="Additional Address Info"
               onChange={handleChange}
             />
@@ -114,11 +118,11 @@ export default function Register() {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="zipcode">
+          <label htmlFor="postalCode">
             <input
               type="text"
-              id="zipcode"
-              name="zipcode"
+              id="postal_code"
+              name="postalCode"
               placeholder="Zipcode*"
               onChange={handleChange}
             />
