@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
 
-.register-main {
+.login-main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 100vh;
@@ -8,44 +8,41 @@
   color: rgba(70, 92, 97, 0.56);
 }
 
-.register-main .back-arrow {
+.login-main .back-arrow {
   position: fixed;
   width: 1rem;
   top: 1rem;
   left: 1rem;
 }
 
-.register-section {
+.login-section {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding: 10rem 0;
 }
 
-.register-section img {
+.login-section img {
   /* width: 50%; */
   height: 100px;
 }
 
-.register-section h1 {
+.login-section h1 {
   font-weight: 700;
   color: #092936;
 }
 
-.register-form {
-  display: grid;
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 19.5rem;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr;
 }
 
-.register-form label:nth-of-type(3),
-.register-form p,
-.register-form button {
-  grid-column: 1 / -1;
-}
-
-.register-form input {
+.login-form input {
   width: 100%;
   resize: none;
   background: #ffffff;
@@ -55,7 +52,7 @@
   outline: none;
 }
 
-.register-form p {
+.login-form p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,12 +60,12 @@
   margin: auto;
 }
 
-.register-form p img {
+.login-form p img {
   height: 18px;
   width: 22px;
 }
 
-.register-form button[type="submit"] {
+.login-form button[type="submit"] {
   background-color: #96cd32;
   border-radius: 5px;
   padding: 0.5rem 2rem;
@@ -77,7 +74,32 @@
   color: white;
 }
 
-.bg-img-register {
+.login-main p:nth-of-type(2) {
+  border-bottom: 1px solid #b1bbbd;
+  width: 19.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.login-main p:nth-of-type(2)::before {
+  content: "OR";
+  color: #b1bbbd;
+  position: relative;
+  top: 14px;
+  z-index: 3;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.login-main .link-register {
+  color: #96cd32;
+  border: 1px solid #96cd32;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.bg-img-login {
   background-image: url(../../assets/bg-img/login_background.svg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -85,18 +107,13 @@
 }
 
 @media screen and (max-width: 850px) {
-  .register-main {
+  .login-main {
     display: block;
     width: 80%;
     margin: 2rem auto;
   }
 
-  .register-form {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .bg-img-register {
+  .bg-img-login {
     display: none;
   }
 }
