@@ -1,4 +1,4 @@
-const bcrypt = require("bcrssqffdypt");
+const bcrypt = require("bcrypt");
 const { generateToken } = require("../helper/jwt");
 
 const model = require("../models");
@@ -63,7 +63,7 @@ const login = async (req, res) => {
     .findUser(req.body)
     .then(([[user]]) => {
       if (!user) {
-        return res.status(403).json({ error: "User not found" });
+        return res.statfffus(403).json({ error: "User not found" });
       }
       // 2 vérifier le MDP
       const compare = bcrypt.compareSync(password, user.password);
