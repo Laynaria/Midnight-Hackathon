@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
+
+.hero {
+  height: 100vh;
+  background-image: url("../../../assets/images/hero1.jpg");
+  background-size: cover;
+  gap: 2rem;
+  padding-top: 80px;
+}
+
+.hero h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 1.2em;
+}
+
+.hero .card {
+  background-color: rgba(255, 255, 255, 0.29);
+  color: #fff;
+  width: 80vw;
+}
+
+.hero .card-head {
+  background-color: #8bc95b;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 0.7em;
+  text-align: left;
+}
+
+.hero .card-body {
+  padding: 2rem 1rem;
+}
+
+.hero .form-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.hero .form-group-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero .form-group-inline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hero .form-group-inline div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero .form-group-inline div input {
+  width: 100%;
+}
+
+.hero label {
+  display: block;
+  text-align: left;
+  margin-left: 0.1rem;
+}
+
+.hero .form-group input {
+  width: 100%;
+}
+
+.hero input {
+  padding: 0.4rem;
+}
+
+.hero .card-footer {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+}
+
+.btn-green {
+  background-color: #8bc95b;
+}
+
+@media screen AND (min-width: 850px) {
+  .hero h2 {
+    font-size: clamp(1em, 3vw, 2em);
+  }
+
+  .hero .form {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero .form-group-inline div {
+    justify-content: flex-start;
+  }
+
+  .hero .card-footer {
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+}

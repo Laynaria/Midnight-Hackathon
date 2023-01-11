@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
+
+/*
+* SERVICES
+*/
+@keyframes slidein {
+  from {
+    margin-top: 0rem;
+  }
+
+  50% {
+    margin-top: -2rem;
+  }
+
+  to {
+    margin-top: 0rem;
+  }
+}
+
+.services {
+  margin: auto;
+  width: clamp(7rem, 100vw, 80rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  color: #092936;
+}
+
+.services-card {
+  width: 60vw;
+  height: 50vw;
+  background-color: #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.52);
+  cursor: pointer;
+}
+
+.services-card div:nth-of-type(1) {
+  font-size: 4em;
+}
+
+.services-card div:nth-of-type(2) {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media screen AND (min-width: 850px) {
+  .services {
+    flex-direction: row;
+    padding: 8rem;
+  }
+
+  .services-card {
+    width: 100%;
+    height: auto;
+    padding: 4rem 2rem;
+    gap: 1rem;
+  }
+
+  .services-card:hover {
+    background-color: #092936;
+    color: #e9e9e9;
+    box-shadow: none;
+    /* margin-top: -2rem; */
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+  }
+
+  .services-card div:nth-of-type(1) {
+    font-size: 5em;
+  }
+
+  .services-card div:nth-of-type(2) {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+/*
+* PRESENTATION
+*/
+
+.presentation {
+  background-color: #092936;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pres-title1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.pres-title2 {
+  font-weight: bold;
+  color: rgba(139, 201, 91, 1);
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.pres-text {
+  color: rgba(180, 180, 180, 1);
+}
+
+@media screen AND (min-width: 850px) {
+  .presentation {
+    background-color: #092936;
+    width: 100%;
+    padding: 3rem 8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .presentation div {
+    width: 50%;
+  }
+
+  .presentation img {
+    width: 30vw;
+  }
+}
+
+/*
+* LAST RENT
+*/
+
+.lastRent {
+  width: 80vw;
+  margin: auto;
+}
+
+.lastRent h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 3rem 0;
+}
+
+.card-rent {
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.52);
+  margin-bottom: 2rem;
+}
+
+.card-rent-head {
+  /* background-image: url('../assets/images/car2.jpg'); */
+  height: 180px;
+  width: 100%;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.card-rent-body {
+  padding: 2rem 0;
+}
+
+.card-rent-body .title1 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.card-rent-body .title2 {
+  font-size: 0.7em;
+  color: #838383;
+}
+
+.card-rent-body .button {
+  background-color: #8bc95b;
+  width: fit-content;
+  padding: 0.5em 1rem;
+  font-weight: bold;
+  font-size: 0.7em;
+  margin: auto;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+}
+
+.card-rent-foot {
+  border-top: 1px #d2d2d2 solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-rent-foot div {
+  padding: 0.6rem;
+  font-size: 0.7em;
+  color: #727272;
+  text-align: center;
+  border-right: 1px #d2d2d2 solid;
+}
+
+.card-rent-foot div:nth-last-of-type() {
+  border-right: none;
+}
+
+@media screen AND (min-width: 850px) {
+  .lastRent {
+    padding: 6rem;
+  }
+
+  .lastRentContent {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .card-rent-head {
+    width: 20vw;
+  }
+
+  .card-rent:hover {
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.52);
+    cursor: pointer;
+  }
+}
+
+/*
+* INFOS
+*/
+
+.infos {
+  background-color: rgba(9, 41, 54, 0.17);
+  display: flex;
+  justify-content: space-around;
+  padding: clamp(1rem, 5vw, 5rem);
+  color: #6c6c6c;
+  line-height: clamp(0.5, 1vw, 1.2em);
+}
+
+.infosIcon {
+  font-size: clamp(1em, 3vw, 3em);
+  margin-bottom: 0.8rem;
+}
+
+.infosTitle2 {
+  font-weight: bold;
+  font-size: clamp(0.5em, 2vw, 0.9em);
+}
+
+.infosTitle1 {
+  font-size: clamp(0.5em, 2vw, 1.3em);
+}
+
+@media screen AND (min-width: 850px) {
+}
