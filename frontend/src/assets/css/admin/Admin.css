@@ -301,14 +301,14 @@ main {
 }
 
 .tableTitle {
-  font-size: 1.5em;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 0 1.5rem 1.5rem 0;
 }
 
 .tableContent {
   width: 34.5rem;
-  height: 20rem;
+  height: 22.5rem;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -329,6 +329,22 @@ main {
 
 .card-body {
   padding: 4rem;
+}
+
+/* Table Vehicles */
+
+.tableTitleVehicles {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 1.5rem;
+}
+
+.tableContentVehicles {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 1.5rem;
 }
 
 /*
@@ -496,4 +512,19 @@ main {
 .membersListContent:hover {
   cursor: pointer;
   background-color: rgba(234, 234, 234, 0.867);
+}
+
+/* Table */
+
+.linkContentTable {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+}
+
+.linkTable {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #8bc95b;
 }

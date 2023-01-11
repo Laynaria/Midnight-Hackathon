@@ -1,5 +1,10 @@
 import LeftBar from "@components/Admin/LeftBar";
 import Header from "@components/Admin/Header";
+import VehiclesTable from "@components/Admin/Tables/VehiclesTable";
+import * as React from "react";
+import BookingTable from "@components/Admin/Tables/BookingTable";
+import MaintenanceTable from "@components/Admin/Tables/MaintenanceTable";
+import UsersTable from "@components/Admin/Tables/UsersTable";
 
 export default function Dashboard() {
   return (
@@ -29,21 +34,49 @@ export default function Dashboard() {
           <div className="content">
             <div className="tableItem">
               <div className="tableTitle">Vehicles</div>
-              <div className="tableContent" />
+              <div className="tableContent">
+                <VehiclesTable />
+                <div className="linkContentTable">
+                  <a className="linkTable" href="/admin/VehiclesAdmin.jsx">
+                    Read more
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="tableItem">
               <div className="tableTitle">Maintenance scheduled</div>
-              <div className="tableContent" />
+              <div className="tableContent">
+                <MaintenanceTable />
+                <div className="linkContentTable">
+                  <a className="linkTable" href="/admin/VehiclesAdmin.jsx">
+                    Read more
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="content">
             <div className="tableItem">
               <div className="tableTitle">Bookings</div>
-              <div className="tableContent" />
+              <div className="tableContent">
+                <BookingTable />
+                <div className="linkContentTable">
+                  <a className="linkTable" href="/admin/VehiclesAdmin.jsx">
+                    Read more
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="tableItem">
               <div className="tableTitle">Users</div>
-              <div className="tableContent" />
+              <div className="tableContent">
+                <UsersTable />
+                <div className="linkContentTable">
+                  <a className="linkTable" href="/admin/VehiclesAdmin.jsx">
+                    Read more
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
