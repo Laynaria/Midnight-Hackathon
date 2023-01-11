@@ -58,11 +58,11 @@ button[type="submit"] {
   color: white;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 850px) {
   form {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 80%;
     padding: 2rem;
   }
 }
