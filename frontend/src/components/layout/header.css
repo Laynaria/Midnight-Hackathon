@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
+
+header {
+  max-height: 80px;
+  position: fixed;
+  width: 100vw;
+  font-family: "Montserrat";
+  font-size: 1em;
+  color: #838383;
+  box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.52);
+  text-transform: uppercase;
+  font-weight: bold;
+  flex-direction: column;
+  top: 0;
+  background-color: white;
+}
+
+.navLogo {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.52);
+  position: relative;
+  z-index: 1;
+}
+
+.navTopButton {
+  margin-right: 2rem;
+}
+
+.navLogo img {
+  border-radius: 0px 0px 0.5rem 0.5rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.52);
+  height: 80px;
+}
+
+.navTop {
+  display: flex;
+  align-self: center;
+  gap: 0vw;
+  flex-direction: column;
+  width: 100%;
+  gap: 1px;
+  background-color: rgb(229 229 229);
+}
+
+.navTop li {
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+
+.navTopRight {
+  background-color: #092936;
+  color: #fff;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+}
+
+.clickedLinked {
+  color: #8bc95b;
+}
+
+@media screen AND (min-width: 850px) {
+  header {
+    flex-direction: row;
+  }
+
+  .navLogo {
+    margin-left: clamp(2rem, 3vw, 15rem);
+    width: 15rem;
+    display: block;
+    box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0);
+  }
+
+  .navTopButton {
+    display: none;
+  }
+
+  .navLogo img {
+    height: auto;
+  }
+
+  .navTop {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    background-color: transparent;
+    width: fit-content;
+  }
+
+  .navTopRight {
+    padding: 2rem;
+    display: flex;
+  }
+}

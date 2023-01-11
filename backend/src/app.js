@@ -1,45 +1,32 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
-const cors = require("cors");
-const router = require("./router");
 
 const app = express();
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
-// use some application-level middlewares
+const authRouter = require("./routes/authRouter");
+const fileRouter = require("./routes/fileRouter");
+const authMiddleware = require("./middleware/authMiddleware");
+// ce middleware me permet de récuperer le corp json
+app.use(express.json());
+app.use(cookieParser());
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ?? "http://localhost:3000",
-    optionsSuccessStatus: 200,
+    origin: "http://localhost:5173",
+    credentials: true,
   })
 );
 
-app.use(express.json());
+app.use(fileRouter);
+app.use("/auth", authRouter);
 
-// Serve the public folder for public resources
-app.use(express.static(path.join(__dirname, "../public")));
+app.get("/", (req, res) => {
+  res.send("🐘");
+});
 
-// Serve REACT APP
-app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
+app.get("/admin", authMiddleware, (req, res) => {
+  res.send("Hello admin!");
+});
 
-// API routes
-app.use(router);
-
-// Redirect all requests to the REACT app
-const reactIndexFile = path.join(
-  __dirname,
-  "..",
-  "..",
-  "frontend",
-  "dist",
-  "index.html"
-);
-
-if (fs.existsSync(reactIndexFile)) {
-  app.get("*", (req, res) => {
-    res.sendFile(reactIndexFile);
-  });
-}
-
-// ready to export
 module.exports = app;
