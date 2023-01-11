@@ -25,20 +25,25 @@ header {
   margin-left: 2rem;
   display: flex;
   align-items: center;
+  width: 40rem;
+  height: 3.5rem;
+  background-color: #f2f2f2;
+  border-radius: 10px;
 }
 
 .searchIcon {
-  background-color: #f3f3f3;
-  padding: 0.4rem 0.6rem;
   border-radius: 0px 5px 5px 0px;
   color: #aeaeae;
+  padding-left: 1rem;
 }
 
 .header-search input {
-  padding: 0.6rem;
+  padding: 1rem;
+  width: 100%;
   border: none;
   background-color: #f3f3f3;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 10px 10px 10px 10px;
+  font-family: Montserrat;
 }
 
 .header-search input:focus {
@@ -54,7 +59,7 @@ header {
 
 .header-user {
   display: flex;
-  margin-right: 4rem;
+  margin-right: 1rem;
 }
 
 .header-userName {
@@ -62,8 +67,13 @@ header {
   cursor: pointer;
 }
 
+.notification {
+  width: 2.5rem;
+  margin-right: 2rem;
+}
+
 .avatar {
-  width: 2rem;
+  width: 3rem;
   border-radius: 100%;
   margin-right: 0.8rem;
 }
@@ -171,7 +181,7 @@ nav {
 }
 
 .navListIcon {
-  margin-right: 0.3rem;
+  margin-right: 1rem;
 }
 
 .spaceName {
