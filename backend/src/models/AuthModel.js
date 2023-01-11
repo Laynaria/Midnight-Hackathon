@@ -7,7 +7,7 @@ class AuthModel {
 
   insert(user) {
     return connection.query(
-      `insert into ${this.table} (firstname, lastname, mail, password, phone, cellphone, adress, additional_address, postal_code, city) value (?,?,?,?,?,?,?,?,?,?)`,
+      `insert into ${this.table} (firstname, lastname, mail, password, phone, cellphone, address, additional_address, postal_code, city) value (?,?,?,?,?,?,?,?,?,?)`,
       [
         user.firstname,
         user.lastname,
@@ -15,7 +15,7 @@ class AuthModel {
         user.password,
         user.phone,
         user.cellphone,
-        user.adress,
+        user.address,
         user.additionalAddress,
         user.postalCode,
         user.city,

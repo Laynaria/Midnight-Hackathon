@@ -19,6 +19,10 @@ app.use(
 
 app.use("/auth", authRouter);
 
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+});
+
 app.get("/admin", authMiddleware, (req, res) => {
   res.send("Hello admin!");
 });
