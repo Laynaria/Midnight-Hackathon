@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import AuthService from "@services/AuthService";
+import Notify from "@utils/Notification";
 
 import logo from "@assets/images/logov2.svg";
 import hide from "@assets/images/hide.svg";
@@ -36,8 +37,8 @@ export default function Register() {
   // function to send the form value to backend
   const handleSubmit = (e) => {
     e.preventDefault();
-    AuthService.register(registerObject).then((data) => {
-      console.warn(data);
+    AuthService.register(registerObject).then(() => {
+      Notify.success("Account created successfully");
     });
   };
 
