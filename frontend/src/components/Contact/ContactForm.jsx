@@ -1,6 +1,26 @@
+import { useState } from "react";
+
 export default function ContactForm() {
-  const handleClick = (e) => {
+  // state to store the values from the form
+  const [contactObject, setContactObject] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    zipcode: "",
+    message: "",
+  });
+
+  // function to register every change from the form in the state
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactObject({ ...contactObject, [name]: value });
+  };
+
+  // function to send the form values as a mail
+  const handleSubmit = (e) => {
     e.preventDefault();
+    // add what is needed to send the state contactObject as a mail.
   };
 
   return (
@@ -8,33 +28,71 @@ export default function ContactForm() {
       className="mx-auto"
       action=""
       method="post"
-      onSubmit={(e) => handleClick(e)}
+      onSubmit={(e) => handleSubmit(e)}
     >
       <label htmlFor="firstname">
-        <input type="text" id="firstname" placeholder="Firstname" />
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          placeholder="Firstname"
+          onChange={handleChange}
+        />
       </label>
       <label htmlFor="lastname">
-        <input type="text" id="lastname" placeholder="Lastname" />
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="Lastname"
+          onChange={handleChange}
+        />
       </label>
       <label htmlFor="email">
-        <input type="email" id="email" placeholder="Email" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+        />
       </label>
       <label htmlFor="phone">
-        <input type="tel" id="phone" placeholder="Phone" />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone"
+          onChange={handleChange}
+        />
       </label>
       <label htmlFor="zipcode">
-        <input type="text" id="zipcode" placeholder="Zipcode" />
+        <input
+          type="text"
+          id="zipcode"
+          name="zipcode"
+          placeholder="Zipcode"
+          onChange={handleChange}
+        />
       </label>
       <label htmlFor="object">
-        <input type="text" id="object" placeholder="Object" />
+        <input
+          type="text"
+          id="object"
+          name="object"
+          placeholder="Object"
+          onChange={handleChange}
+        />
       </label>
-      <label htmlFor="textarea">
+      <label htmlFor="message">
         <textarea
-          id="textarea"
+          id="message"
+          name="message"
           rows="10"
           maxLength="500"
           wrap
           placeholder="Your Message"
+          onChange={handleChange}
         />
       </label>
       <button type="submit">Send</button>
