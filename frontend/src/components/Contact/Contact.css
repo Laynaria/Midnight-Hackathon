@@ -1,12 +1,13 @@
-main {
+h1 {
+  padding-top: 5rem;
+  padding-bottom: 25rem;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../../assets/bg-img/contact_background.svg);
-}
-
-h1 {
+  background-position: top center;
   font-size: 3rem;
   text-transform: uppercase;
   color: white;
+  margin-bottom: 5rem;
 }
 
 h1 span {
@@ -14,6 +15,8 @@ h1 span {
 }
 
 form {
+  margin-top: -20rem;
+  margin-bottom: 7rem;
   width: 50rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -53,4 +56,13 @@ button[type="submit"] {
   margin: auto;
   font-size: 1.5rem;
   color: white;
+}
+
+@media screen and (max-width: 720px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 2rem;
+  }
 }
