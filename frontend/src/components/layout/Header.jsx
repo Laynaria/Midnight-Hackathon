@@ -6,6 +6,9 @@ import logobg from "../../assets/images/logobg.jpg";
 import "./header.css";
 
 export default function Header() {
+  // To make current link green
+  const [clickedLinked, setClickedLink] = useState(0);
+
   const [showNavTop, setShowNavTop] = useState(true);
 
   const hundleClickShowNav = () => {
@@ -49,14 +52,20 @@ export default function Header() {
       {showNavTop ? (
         <>
           <ul id="navTop" className="navTop">
-            <Link to="/">
-              <li>Home</li>
+            <Link to="/" onClick={() => setClickedLink(0)}>
+              <li className={clickedLinked === 0 ? "clickedLinked" : ""}>
+                Home
+              </li>
             </Link>
-            <Link to="/vehicles">
-              <li>Vehicle</li>
+            <Link to="/vehicles" onClick={() => setClickedLink(1)}>
+              <li className={clickedLinked === 1 ? "clickedLinked" : ""}>
+                Vehicle
+              </li>
             </Link>
-            <Link to="/contact">
-              <li>Contact</li>
+            <Link to="/contact" onClick={() => setClickedLink(2)}>
+              <li className={clickedLinked === 2 ? "clickedLinked" : ""}>
+                Contact
+              </li>
             </Link>
           </ul>
           <Link className="navTopRight items-center pr-10 pl-10" to="/login">

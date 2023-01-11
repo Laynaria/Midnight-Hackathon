@@ -11,6 +11,8 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   flex-direction: column;
+  top: 0;
+  background-color: white;
 }
 
 .navLogo {
@@ -56,6 +58,10 @@ header {
   padding: 1rem;
   justify-content: center;
   display: flex;
+}
+
+.clickedLinked {
+  color: #8bc95b;
 }
 
 @media screen AND (min-width: 850px) {

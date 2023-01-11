@@ -1,4 +1,11 @@
-h1 {
+@import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
+
+.contact-form {
+  margin-top: 5rem;
+  font-family: "Montserrat";
+}
+
+.contact-form h1 {
   padding-top: 5rem;
   padding-bottom: 25rem;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -10,11 +17,11 @@ h1 {
   margin-bottom: 5rem;
 }
 
-h1 span {
+.contact-form h1 span {
   color: #96cd32;
 }
 
-form {
+.contact-form form {
   margin-top: -20rem;
   margin-bottom: 7rem;
   width: 50rem;
@@ -27,15 +34,15 @@ form {
   border-radius: 18px;
 }
 
-label:nth-of-type(3),
-label:nth-of-type(6),
-label:nth-of-type(7),
-button {
+.contact-form label:nth-of-type(3),
+.contact-form label:nth-of-type(6),
+.contact-form label:nth-of-type(7),
+.contact-form button {
   grid-column: 1 / -1;
 }
 
-input,
-textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   resize: none;
   background: #ffffff;
@@ -45,11 +52,11 @@ textarea {
   outline: none;
 }
 
-input:nth-of-type(7) {
+.contact-form input:nth-of-type(7) {
   height: 25rem;
 }
 
-button[type="submit"] {
+.contact-form button[type="submit"] {
   background-color: #96cd32;
   border-radius: 5px;
   padding: 0.5rem 2rem;
@@ -59,7 +66,7 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 850px) {
-  form {
+  .contact-form form {
     display: flex;
     flex-direction: column;
     width: 80%;
