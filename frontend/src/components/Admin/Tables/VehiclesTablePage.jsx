@@ -8,6 +8,7 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../../../assets/css/admin/Admin.css";
+import editButton from "../../../assets/img/editButton.svg";
 
 function createData({ id, type, brand, model, immat, available }) {
   return { id, type, brand, model, immat, available };
@@ -87,6 +88,10 @@ export default function VehiclesTablePage() {
               <TableCell align="left">Model</TableCell>
               <TableCell align="left">Immat</TableCell>
               <TableCell align="left">Available</TableCell>
+              <TableCell align="left">Autonomy</TableCell>
+              <TableCell align="left">Object</TableCell>
+              <TableCell align="left">Capacity</TableCell>
+              <TableCell align="left">Modify</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -105,6 +110,10 @@ export default function VehiclesTablePage() {
                   <TableCell align="left">
                     {isAvailable(row.available)}
                   </TableCell>
+                  <TableCell align="left">{row.autonomy}</TableCell>
+                  <TableCell align="left">{row.object}</TableCell>
+                  <TableCell align="left">{row.capacity}</TableCell>
+                  <TableCell align="left"><img className="editButton" src={editButton} /></TableCell>
                 </TableRow>
               ))}
           </TableBody>
