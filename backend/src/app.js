@@ -5,6 +5,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
 const authRouter = require("./routes/authRouter");
+const fileRouter = require("./routes/fileRouter");
 const authMiddleware = require("./middleware/authMiddleware");
 // ce middleware me permet de récuperer le corp json
 app.use(express.json());
@@ -17,10 +18,11 @@ app.use(
   })
 );
 
+app.use(fileRouter);
 app.use("/auth", authRouter);
 
 app.get("/", (req, res) => {
-  res.send("Hello world!");
+  res.send("🐘");
 });
 
 app.get("/admin", authMiddleware, (req, res) => {
