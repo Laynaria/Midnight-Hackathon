@@ -25,6 +25,7 @@ CREATE TABLE car(
     -> matriculation VARCHAR(50) NOT NULL,
     -> is_available TINYINT(1) NOT NULL,
     -> type VARCHAR(50) NOT NULL,
+    -> model VARCHAR(50) NOT NULL,
     -> ideal_object VARCHAR(50) NOT NULL,
     -> ideal_distance VARCHAR(50) NOT NULL,
     -> ideal_places VARCHAR(50) NOT NULL,
