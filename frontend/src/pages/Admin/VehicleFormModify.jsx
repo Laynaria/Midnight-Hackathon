@@ -26,6 +26,7 @@ export default function VehicleFormModify() {
   };
 
   const handleSubmit = (event) => {
+    console.log(vehicle);
     event.preventDefault();
     // const data = event.target.value;
     fetch(`${ApiBaseUrL}/car/${id}`, {
@@ -119,6 +120,17 @@ export default function VehicleFormModify() {
             />
             <div className="tableTitleVehicles">Avaibility</div>
             <div className="adminCalendar">
+              <div className="adminContentVehicles">
+                <div className="titleField1">Avaibility</div>
+                <input
+                    className="form"
+                    type="boolean"
+                    name="is_available"
+                    placeholder="is_available"
+                    value={vehicle.is_available}
+                    onChange={handleChange}
+                />
+              </div>
               <Calendar />
             </div>
             <div className="tableTitleVehicles">Picture</div>
