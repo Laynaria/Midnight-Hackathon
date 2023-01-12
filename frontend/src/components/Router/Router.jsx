@@ -14,6 +14,7 @@ import Contact from "@pages/Contact";
 // Auth
 import Register from "@pages/Auth/Register";
 import Login from "@pages/Auth/Login";
+import Profile from "@pages/Auth/Profile";
 
 // Admin
 import Dashboard from "@pages/Admin/Dashboard";
@@ -68,6 +69,8 @@ export default function Router() {
         />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/vehicles" element={<Vehicles />} />
         <Route path="/vehicles/:id" element={<Vehiclesid />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Dashboard />} />
