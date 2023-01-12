@@ -10,15 +10,15 @@ class UserModel {
       `select *
              from ${this.table}`,
       [
-          user.firstname,
-          user.lastname,
-          user.mail,
-          user.phone,
-          user.cellphone,
-          user.address,
-          user.additionalAddress,
-          user.postalCode,
-          user.city,
+        user.firstname,
+        user.lastname,
+        user.mail,
+        user.phone,
+        user.cellphone,
+        user.address,
+        user.additionalAddress,
+        user.postalCode,
+        user.city,
       ]
     );
   }

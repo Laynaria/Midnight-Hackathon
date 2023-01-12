@@ -22,7 +22,7 @@ export default function VehiclesTable() {
     fetch("http://localhost:5501/car")
       .then((response) => response.json())
       .then((data) => {
-        setRows(data);
+        setRows(data[0]);
       });
   }, []);
 
@@ -39,7 +39,9 @@ export default function VehiclesTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows
+              .slice(0,5)
+              .map((row) => (
             <TableRow
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

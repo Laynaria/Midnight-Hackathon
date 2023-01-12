@@ -8,54 +8,19 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../../../assets/css/admin/Admin.css";
 
-function createData({ id, firstname, name, address, city, phone }) {
-  return { id, firstname, name, address, city, phone };
-}
 
-const rows = [
-  createData({
-    id: 1,
-    firstname: "John",
-    name: "Doe",
-    address: "123 Main St",
-    city: "Anytown",
-    phone: "555-555-5555",
-  }),
-  createData({
-    id: 2,
-    firstname: "Jane",
-    name: "Smith",
-    address: "456 Park Ave",
-    city: "Metropolis",
-    phone: "555-555-5556",
-  }),
-  createData({
-    id: 3,
-    firstname: "Bob",
-    name: "Johnson",
-    address: "789 Elm St",
-    city: "Smallville",
-    phone: "555-555-5557",
-  }),
-  createData({
-    id: 4,
-    firstname: "Alice",
-    name: "Williams",
-    address: "321 Oak St",
-    city: "Bigcity",
-    phone: "555-555-5558",
-  }),
-  createData({
-    id: 5,
-    firstname: "Charlie",
-    name: "Brown",
-    address: "654 Pine St",
-    city: "Springfield",
-    phone: "555-555-5559",
-  }),
-];
 
 export default function MaintenanceTable() {
+  const [rows, setRows] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch("http://localhost:5501/user")
+        .then((response) => response.json())
+        .then((data) => {
+          setRows(data[0]);
+        });
+  }, []);
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 550 }} aria-label="simple table">
@@ -69,13 +34,15 @@ export default function MaintenanceTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows
+              .slice(0,5)
+              .map((row) => (
             <TableRow
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell>{row.firstname}</TableCell>
-              <TableCell align="left">{row.name}</TableCell>
+              <TableCell align="left">{row.lastname}</TableCell>
               <TableCell align="left">{row.address}</TableCell>
               <TableCell align="left">{row.city}</TableCell>
               <TableCell align="left">{row.phone}</TableCell>
