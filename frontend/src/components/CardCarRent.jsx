@@ -6,7 +6,7 @@ export default function CardCarRent({ elem }) {
   return (
     <div className="card-rent">
       <div
-        style={{ backgroundImage: `url(${elem.img})` }}
+        style={{ backgroundImage: `url(/src/assets/images/${elem.img})` }}
         className="card-rent-head"
       />
       <div className="card-rent-body">

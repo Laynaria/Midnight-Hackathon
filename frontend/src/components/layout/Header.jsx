@@ -7,7 +7,7 @@ import "./header.css";
 
 export default function Header() {
   const sampleLocation = useLocation();
-  console.warn(sampleLocation);
+  console.warn(sampleLocation.pathname.split("/")[1]);
 
   const [showNavTop, setShowNavTop] = useState(true);
 
@@ -42,7 +42,7 @@ export default function Header() {
       url: "/",
     },
     {
-      name: "vehicle",
+      name: "vehicles",
       url: "/vehicles",
     },
     {
@@ -72,7 +72,9 @@ export default function Header() {
                 <li
                   key={item.name}
                   className={
-                    sampleLocation.pathname === item.url ? "clickedLinked" : ""
+                    `/${sampleLocation.pathname.split("/")[1]}` === item.url
+                      ? "clickedLinked"
+                      : ""
                   }
                 >
                   {item.name}
