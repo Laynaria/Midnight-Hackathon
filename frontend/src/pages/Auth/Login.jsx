@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+
+import AuthService from "@services/AuthService";
+import Notify from "@utils/Notification";
 
 import logo from "@assets/images/logov2.svg";
 import hide from "@assets/images/hide.svg";
@@ -12,8 +15,10 @@ export default function Logo() {
   const [isShown, setIsShown] = useState(false);
   const [isSubmitClicked, setIsSubmitClicked] = useState(false);
 
+  const navigate = useNavigate();
+
   const [loginObject, setLoginObject] = useState({
-    email: "",
+    mail: "",
     password: "",
   });
 
@@ -27,7 +32,17 @@ export default function Logo() {
   const handleSubmit = (e) => {
     setIsSubmitClicked(false);
     e.preventDefault();
-    console.warn(loginObject);
+
+    if (loginObject.mail === "" || loginObject.password === "") {
+      Notify.error("Please fill all the required fields");
+      return;
+    }
+
+    AuthService.login(loginObject).then(() => {
+      Notify.success("Loginned successfully");
+      navigate("/profile");
+    });
+
     // add what is needed to send the state loginObject as a mail.
   };
 
@@ -49,11 +64,11 @@ export default function Logo() {
           method="post"
           onSubmit={(e) => handleSubmit(e)}
         >
-          <label htmlFor="email">
+          <label htmlFor="mail">
             <input
               type="email"
-              id="email"
-              name="email"
+              id="mail"
+              name="mail"
               placeholder="Email*"
               onChange={handleChange}
             />
