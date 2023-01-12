@@ -68,7 +68,7 @@ export default function UsersTablePage() {
                   <TableCell align="left">{row.postal_code}</TableCell>
                   <TableCell align="left">{row.city}</TableCell>
                   <TableCell align="left">
-                    <Link to="/admin/vehicles/:id">
+                    <Link to={`/admin/users/${row.id}`}>
                       <img
                         className="editButton"
                         src={editButton}
