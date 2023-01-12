@@ -20,8 +20,8 @@ app.use(
 );
 
 app.use(fileRouter);
-app.use("/auth", authRouter);
 app.use(contactRouter);
+app.use("/auth", authRouter);
 
 app.get("/", (req, res) => {
   res.send("🐘");

@@ -38,7 +38,7 @@
   align-items: center;
   gap: 1rem;
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   margin-right: 3rem;
 }
 
@@ -81,7 +81,6 @@
   .reseau img {
     height: 40px;
   }
-  
 
   .voiture {
     height: 60px;

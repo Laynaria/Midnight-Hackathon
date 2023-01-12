@@ -52,8 +52,20 @@
   outline: none;
 }
 
+.contact-form input:focus {
+  border: 1px solid #96cd32;
+}
+
+.contact-form input:focus:invalid {
+  border: 1px solid rgb(192, 66, 66);
+}
+
 .contact-form input:nth-of-type(7) {
   height: 25rem;
+}
+
+.contact-form textarea:focus {
+  border: 1px solid #96cd32;
 }
 
 .contact-form button[type="submit"] {
