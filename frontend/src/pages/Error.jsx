@@ -1,9 +1,34 @@
-import NavbarLayout from "@components/layout/NavbarLayout";
+import { useNavigate } from "react-router-dom";
+
+import { Player } from "@lottiefiles/react-lottie-player";
+
+import errorCar from "../assets/lottie/carerror.json";
+
+import "@assets/css/Error/Error.css";
 
 export default function Error() {
+  const navigate = useNavigate();
+
   return (
-    <NavbarLayout>
-      <h1 style={{ marginTop: "5rem" }}>This is Error</h1>
-    </NavbarLayout>
+    <div className="error-notfound">
+      <Player
+        loop
+        autoplay
+        src={errorCar}
+        style={{ height: "300px", width: "300px" }}
+      />
+      <h1>404</h1>
+      <h2>
+        It seems that you had a road accident ... but don't panic our
+        technicians are on the case !
+      </h2>
+      <button
+        onClick={() => navigate("/")}
+        type="button"
+        className="btn btn-primary"
+      >
+        Go back
+      </button>
+    </div>
   );
 }
