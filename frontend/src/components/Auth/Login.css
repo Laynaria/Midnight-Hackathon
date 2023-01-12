@@ -110,8 +110,7 @@
 @media screen and (max-width: 850px) {
   .login-main {
     display: block;
-    width: 80%;
-    margin: 2rem auto;
+    width: 100%;
   }
 
   .bg-img-login {

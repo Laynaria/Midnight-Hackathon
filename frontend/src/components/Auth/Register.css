@@ -85,16 +85,33 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 850px) {
-  .register-main {
-    display: block;
-    width: 80%;
-    margin: 2rem auto;
-  }
-
+@media screen and (max-width: 1110px) {
   .register-form {
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 90%;
+  }
+
+  .register-section {
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .register-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .register-main {
+    display: block;
+    width: 100%;
+  }
+
+  .register-section {
+    margin: 0;
+    padding: 2rem 0;
   }
 
   .bg-img-register {
