@@ -90,7 +90,12 @@ export default function Hero({ bg }) {
       <div className="card">
         <div className="card-head">Find the best vehicles for your needs</div>
         <div className="card-body">
-          <form id="searchVehicles" method="post" action="" className="form">
+          <form
+            id="searchVehicles"
+            method="post"
+            action=""
+            className="formSearch"
+          >
             <div className="form-group">
               <label htmlFor="address">Address</label>
               <input

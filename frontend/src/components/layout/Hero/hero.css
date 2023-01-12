@@ -120,7 +120,7 @@
     font-size: clamp(1em, 3vw, 2em);
   }
 
-  .hero .form {
+  .hero .formSearch {
     display: flex;
     gap: 1rem;
   }
