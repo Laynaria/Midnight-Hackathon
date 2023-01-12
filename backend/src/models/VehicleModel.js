@@ -31,23 +31,23 @@ class VehicleModel {
     );
   }
 
-    update(car) {
-        return connection.query(
-            `update ${this.table} set brand = ?, matriculation = ?, is_available = ?, type = ?, model = ?, ideal_object = ?, ideal_distance = ?,
+  update(car) {
+    return connection.query(
+      `update ${this.table} set brand = ?, matriculation = ?, is_available = ?, type = ?, model = ?, ideal_object = ?, ideal_distance = ?,
                 ideal_places = ? where id = ?`,
-            [
-                car.brand,
+      [
+        car.brand,
         car.matriculation,
         car.is_available,
-                car.type,
-                car.model,
-                car.ideal_object,
-                car.ideal_distance,
-                car.ideal_places,
-                car.id
-            ]
-        );
-    }
+        car.type,
+        car.model,
+        car.ideal_object,
+        car.ideal_distance,
+        car.ideal_places,
+        car.id,
+      ]
+    );
+  }
 
   insert(car) {
     return connection.query(

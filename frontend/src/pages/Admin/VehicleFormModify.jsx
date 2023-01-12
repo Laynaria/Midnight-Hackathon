@@ -27,7 +27,6 @@ export default function VehicleFormModify() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(vehicle);;
     // const data = event.target.value;
     fetch(`${ApiBaseUrL}/car/${id}`, {
       method: "PUT",
