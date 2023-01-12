@@ -95,6 +95,24 @@
   color: white;
 }
 
+.login-form .buttonClicked {
+  animation: animRegisterButton 0.5s ease;
+}
+
+@keyframes animRegisterButton {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 .login-main p:nth-of-type(2) {
   border-bottom: 1px solid #b1bbbd;
   width: 19.5rem;
