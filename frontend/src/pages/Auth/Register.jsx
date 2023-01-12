@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import AuthService from "@services/AuthService";
 import Notify from "@utils/Notification";
@@ -14,6 +14,7 @@ import "@components/Auth/Register.css";
 export default function Register() {
   const [isShown, setIsShown] = useState(false);
   const [error, setError] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   const [registerObject, setRegisterObject] = useState({
     firstname: "",
@@ -38,6 +39,7 @@ export default function Register() {
   // function to send the form value to backend
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsClicked(false);
 
     if (registerObject.password !== registerObject.confirm_password) {
       Notify.error("Passwords do not match");
@@ -65,6 +67,10 @@ export default function Register() {
       Notify.success("Account created successfully");
     });
   };
+
+  useEffect(() => {
+    setTimeout(setIsClicked(true), "500");
+  }, [handleSubmit]);
 
   return (
     <main className="register-main">
@@ -150,6 +156,7 @@ export default function Register() {
               id="postal_code"
               name="postalCode"
               placeholder="Zipcode*"
+              min="0"
               onChange={handleChange}
             />
           </label>
@@ -189,7 +196,9 @@ export default function Register() {
             />
             {isShown ? "Hide Password" : "See Password"}
           </p>
-          <button type="submit">Create My Account</button>
+          <button type="submit" className={isClicked ? "buttonClicked" : ""}>
+            Create My Account
+          </button>
         </form>
       </section>
       <div className="bg-img-register" />

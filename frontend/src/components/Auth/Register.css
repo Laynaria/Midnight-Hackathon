@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
 
+@keyframes animRegister {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
 .register-main {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -14,6 +24,7 @@
   width: 1rem;
   top: 1rem;
   left: 1rem;
+  animation: animRegister 1s ease;
 }
 
 .register-section {
@@ -22,6 +33,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  animation: animRegister 1s ease;
 }
 
 .register-section img {
@@ -56,6 +68,14 @@
   outline: none;
 }
 
+.register-form input:focus {
+  border: 1px solid #96cd32;
+}
+
+.register-form input:focus:invalid {
+  border: 1px solid rgb(192, 66, 66);
+}
+
 .register-form p {
   display: flex;
   align-items: center;
@@ -76,6 +96,24 @@
   margin: auto;
   font-size: 1.5rem;
   color: white;
+}
+
+.register-form .buttonClicked {
+  animation: animRegisterButton 0.5s ease;
+}
+
+@keyframes animRegisterButton {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 .bg-img-register {
