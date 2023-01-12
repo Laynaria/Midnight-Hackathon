@@ -12,7 +12,7 @@ export default function Footer() {
         Copyright © 2023 Green Rent - All rights reserved
       </p>
       <div className="footmob">
-        <div className="triangle">montretoi</div>
+        <div className="triangle" />
         <div className="reseau">
           <img alt="logo" className="reso" src={instaicon} />
           <img alt="logo" className="reso" src={fbicon} />
