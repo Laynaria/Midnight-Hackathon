@@ -1,3 +1,9 @@
+DROP TABLE IF EXISTS image;
+DROP TABLE IF EXISTS bookings;
+DROP TABLE IF EXISTS car;
+DROP TABLE IF EXISTS user;
+
+
 CREATE TABLE user(
      id  INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
      firstname VARCHAR(50) NOT NULL,
@@ -48,3 +54,26 @@ CREATE TABLE image(
      CONSTRAINT fk_image_car
      FOREIGN KEY (car_id)
      REFERENCES car(id));
+
+
+INSERT INTO user (firstname, lastname, mail, password, cellphone, address, postal_code, city, is_renter, is_admin) 
+VALUES 
+('john', 'doe', 'john@doe.com', 'john33000', '0546856852', '1 rue gambetta', '33000', 'Bordeaux', '0', '0'), 
+('elie', 'parthenay', 'elie@yahoo.com', 'eliepart', '0623586957', '520 chemin de la glande', '29000', 'Brest', '1', '1'),
+('julien', 'grellier', 'grellier@julien.com', 'jugre', '0672311366', '2 rue pagnolet', '33000', 'bordeaux', '1', '1');  
+
+
+INSERT INTO car (brand, matriculation, is_available, type, model, ideal_object, ideal_distance, ideal_places, user_id) 
+VALUES 
+('mercedes', '597B9P', '1', 'berlin', 'EQE', 'Moving', '100 to 400', '5', 2),
+('renault', '235F8ERT', '1', 'urbanite', 'zoe', 'professional move', '0 to 50', '2', 2),
+('mercedes', '23PF86', '1', 'berlin', 'EQS', 'personal move', '+400', '4', 2),
+('mercedes', '87POL62', '1', 'SUV', 'EQB', 'moving', '+400', '1', 2),
+('mercedes', '57MIB00', '1', 'SUV', 'EQA', 'stroll', '50 to 100', '3', 2);
+
+
+-- INSERT INTO user (firstname, lastname, mail, password, cellphone, address, postal_code, city, is_renter, is_admin) 
+-- VALUES ('', '', '', '', '', '', '', '', '', '');
+
+-- INSERT INTO car (brand, matriculation, is_available, type, model, ideal_object, ideal_distance, ideal_places, user_id) 
+-- VALUES ('', '', '', '', '', '', '', '', );
