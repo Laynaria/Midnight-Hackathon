@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import AuthService from "@services/AuthService";
+// import AuthService from "@services/AuthService";
 import Notify from "@utils/Notification";
 
 import hide from "@assets/images/hide.svg";
@@ -46,12 +46,12 @@ export default function ContactForm() {
     ) {
       Notify.error("Please fill all the required fields");
       setError(true);
-      return;
+      //   return;
     }
 
-    AuthService.register(registerObject).then(() => {
-      Notify.success("Account info updated successfully");
-    });
+    // AuthService.register(registerObject).then(() => {
+    //   Notify.success("Account info updated successfully");
+    // });
   };
 
   useEffect(() => {
@@ -76,12 +76,12 @@ export default function ContactForm() {
     if (updatePassword.password !== updatePassword.confirm_password) {
       Notify.error("Passwords do not match");
       setError(true);
-      return;
+      //   return;
     }
 
-    AuthService.register(updatePassword).then(() => {
-      Notify.success("Password updated successfully");
-    });
+    // AuthService.register(updatePassword).then(() => {
+    //   Notify.success("Password updated successfully");
+    // });
   };
 
   useEffect(() => {
