@@ -1,0 +1,68 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  background-color: #092936;
+}
+
+.triangle {
+    color: #8bc95b;
+    -webkit-clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
+clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
+    right: 0;
+    height: 80px;
+    width: 40%;
+    background-color: #8bc95b;
+    position: absolute;
+    z-index: 1;
+}
+
+p {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.voiture {
+  max-width: 140px;
+  max-height: 80px;
+}
+
+.reseau {
+  display: flex;
+  flex-direction: row;
+  max-width: 80px;
+  max-height: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        justify-content: space-between;
+        flex-direction: column;
+        height: 200px;
+    }
+
+    .triangle {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+     bottom: -38rem;
+     height: 70px;
+     width: 100%;
+    }
+
+    .reseau {
+       margin-right: 40%;
+       height: 60px;
+       
+    }
+
+    .voiture {
+        height: 60px;
+        width: 7rem;
+    }
+
+}
