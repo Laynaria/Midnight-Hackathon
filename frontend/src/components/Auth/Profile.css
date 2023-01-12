@@ -84,6 +84,28 @@
   color: white;
 }
 
+.profile-form .buttonClicked {
+  animation: animRegisterButton 0.5s ease;
+}
+
+@keyframes animRegisterButton {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.profile-form form:nth-of-type(2) {
+  margin-top: -2rem;
+}
+
 @media screen and (max-width: 850px) {
   .profile-form form {
     display: flex;

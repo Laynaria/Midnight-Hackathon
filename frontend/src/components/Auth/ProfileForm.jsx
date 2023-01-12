@@ -10,19 +10,18 @@ export default function ContactForm() {
   const [isShown, setIsShown] = useState(false);
   const [error, setError] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isPasswordButtonClicked, setIsPasswordButtonClicked] = useState(false);
 
   const [registerObject, setRegisterObject] = useState({
     firstname: "",
     lastname: "",
     mail: "",
-    password: "",
     phone: "",
     cellphone: "",
     address: "",
     additionalAddress: "",
     postalCode: "",
     city: "",
-    confirm_password: "",
   });
 
   // function to register every change from the form in the state
@@ -36,22 +35,14 @@ export default function ContactForm() {
     e.preventDefault();
     setIsClicked(false);
 
-    if (registerObject.password !== registerObject.confirm_password) {
-      Notify.error("Passwords do not match");
-      setError(true);
-      return;
-    }
-
     if (
       registerObject.firstname === "" ||
       registerObject.lastname === "" ||
       registerObject.mail === "" ||
-      registerObject.password === "" ||
       registerObject.cellphone === "" ||
       registerObject.address === "" ||
       registerObject.postalCode === "" ||
-      registerObject.city === "" ||
-      registerObject.confirm_password === ""
+      registerObject.city === ""
     ) {
       Notify.error("Please fill all the required fields");
       setError(true);
@@ -59,7 +50,7 @@ export default function ContactForm() {
     }
 
     AuthService.register(registerObject).then(() => {
-      Notify.success("Account created successfully");
+      Notify.success("Account info updated successfully");
     });
   };
 
@@ -67,121 +58,169 @@ export default function ContactForm() {
     setTimeout(setIsClicked(true), "500");
   }, [handleSubmit]);
 
+  // Password part
+  const [updatePassword, setUpdatePassword] = useState({
+    password: "",
+    confirm_password: "",
+  });
+
+  const handlePasswordChange = (e) => {
+    const { name, value } = e.target;
+    setUpdatePassword({ ...updatePassword, [name]: value });
+  };
+
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+    setIsPasswordButtonClicked(false);
+
+    if (updatePassword.password !== updatePassword.confirm_password) {
+      Notify.error("Passwords do not match");
+      setError(true);
+      return;
+    }
+
+    AuthService.register(updatePassword).then(() => {
+      Notify.success("Password updated successfully");
+    });
+  };
+
+  useEffect(() => {
+    setTimeout(setIsPasswordButtonClicked(true), "500");
+  }, [handlePasswordSubmit]);
   return (
-    <form className="mx-auto" method="post" onSubmit={(e) => handleSubmit(e)}>
-      <label htmlFor="firstname">
-        <input
-          type="text"
-          id="firstname"
-          name="firstname"
-          placeholder="Firstname*"
-          className={error ? "error" : ""}
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="lastname">
-        <input
-          type="text"
-          id="lastname"
-          name="lastname"
-          placeholder="Lastname*"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="mail">
-        <input
-          type="email"
-          id="mail"
-          name="mail"
-          placeholder="Email*"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="address">
-        <input
-          type="text"
-          id="address"
-          name="address"
-          placeholder="Address*"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="additionalAddress">
-        <input
-          type="text"
-          id="additionalAddress"
-          name="additionalAddress"
-          placeholder="Additional Address Info"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="phone">
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Phone"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="cellphone">
-        <input
-          type="tel"
-          id="cellphone"
-          name="cellphone"
-          placeholder="Cellphone*"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="postalCode">
-        <input
-          type="number"
-          id="postal_code"
-          name="postalCode"
-          placeholder="Zipcode*"
-          min="0"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="city">
-        <input
-          type="text"
-          id="city"
-          name="city"
-          placeholder="City*"
-          onChange={handleChange}
-        />
-      </label>{" "}
-      <label htmlFor="password">
-        <input
-          type={isShown ? "text" : "password"}
-          id="password"
-          name="password"
-          placeholder="Password*"
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="confirm_password">
-        <input
-          type={isShown ? "text" : "password"}
-          id="confirm_password"
-          name="confirm_password"
-          placeholder="Confirm Password*"
-          onChange={handleChange}
-        />
-      </label>
-      <p>
-        <img
-          src={isShown ? hide : show}
-          alt={isShown ? "hide password" : "show password"}
-          onClick={() => setIsShown(!isShown)}
-          aria-hidden="true"
-        />
-        {isShown ? "Hide Password" : "See Password"}
-      </p>
-      <button type="submit" className={isClicked ? "buttonClicked" : ""}>
-        Update My Account
-      </button>
-    </form>
+    <>
+      <form
+        className="mx-auto"
+        method="update"
+        onSubmit={(e) => handleSubmit(e)}
+      >
+        <label htmlFor="firstname">
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Firstname*"
+            className={error ? "error" : ""}
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="lastname">
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Lastname*"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="mail">
+          <input
+            type="email"
+            id="mail"
+            name="mail"
+            placeholder="Email*"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="address">
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Address*"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="additionalAddress">
+          <input
+            type="text"
+            id="additionalAddress"
+            name="additionalAddress"
+            placeholder="Additional Address Info"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="phone">
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Phone"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="cellphone">
+          <input
+            type="tel"
+            id="cellphone"
+            name="cellphone"
+            placeholder="Cellphone*"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="postalCode">
+          <input
+            type="number"
+            id="postal_code"
+            name="postalCode"
+            placeholder="Zipcode*"
+            min="0"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="city">
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="City*"
+            onChange={handleChange}
+          />
+        </label>{" "}
+        <button type="submit" className={isClicked ? "buttonClicked" : ""}>
+          Update My Account
+        </button>
+      </form>
+
+      <form
+        className="mx-auto"
+        method="update"
+        onSubmit={(e) => handlePasswordSubmit(e)}
+      >
+        <label htmlFor="password">
+          <input
+            type={isShown ? "text" : "password"}
+            id="password"
+            name="password"
+            placeholder="Password*"
+            onChange={handlePasswordChange}
+          />
+        </label>
+        <label htmlFor="confirm_password">
+          <input
+            type={isShown ? "text" : "password"}
+            id="confirm_password"
+            name="confirm_password"
+            placeholder="Confirm Password*"
+            onChange={handlePasswordChange}
+          />
+        </label>
+        <p>
+          <img
+            src={isShown ? hide : show}
+            alt={isShown ? "hide password" : "show password"}
+            onClick={() => setIsShown(!isShown)}
+            aria-hidden="true"
+          />
+          {isShown ? "Hide Password" : "See Password"}
+        </p>
+        <button
+          type="submit"
+          className={isPasswordButtonClicked ? "buttonClicked" : ""}
+        >
+          Change Password
+        </button>
+      </form>
+    </>
   );
 }
