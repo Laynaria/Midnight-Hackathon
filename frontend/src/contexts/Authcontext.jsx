@@ -6,9 +6,8 @@ export function AuthProvider({ children }) {
   const [isLogin, setIsLogin] = useState(false);
 
   const login = useMemo(
-    () => (userToken) => {
+    () => () => {
       setIsLogin(true);
-      sessionStorage.setItem("token", userToken);
     },
     []
   );

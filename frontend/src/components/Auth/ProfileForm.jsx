@@ -221,6 +221,9 @@ export default function ContactForm() {
           Change Password
         </button>
       </form>
+      <button type="button" className="disconnect">
+        Disconnect
+      </button>
     </>
   );
 }
