@@ -38,14 +38,11 @@ export default function ContactForm() {
 
     ContactService.send(contactObject).then(() => {
       Notify.success("Your message has been sent");
-    })
+    });
   };
 
   return (
-    <form
-      className="mx-auto"
-      onSubmit={(e) => handleSubmit(e)}
-    >
+    <form className="mx-auto" onSubmit={(e) => handleSubmit(e)}>
       <label htmlFor="firstname">
         <input
           type="text"

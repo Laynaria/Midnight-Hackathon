@@ -57,11 +57,11 @@ export default function VehicleForm() {
             />
             <div className="titleField">Objectif</div>
             <input
-                className="form"
-                form
-                type="text"
-                name="objectif"
-                placeholder="objectif"
+              className="form"
+              form
+              type="text"
+              name="objectif"
+              placeholder="objectif"
             />
             <div className="tableTitleVehicles">Avaibility</div>
             <div className="adminCalendar">

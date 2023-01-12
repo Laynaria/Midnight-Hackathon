@@ -8,8 +8,8 @@ import {
   faNewspaper,
 } from "@fortawesome/free-solid-svg-icons";
 import LeftListElement from "@components/Admin/LeftListElement";
-import adminlogo from "../../assets/img/Green-rent-logo.png";
 import { Link } from "react-router-dom";
+import adminlogo from "../../assets/img/Green-rent-logo.png";
 
 const navList = [
   {
@@ -84,7 +84,9 @@ function LeftBar() {
         </ul>
       </div>
       <div className="logout">
-      <Link to="/login"><div className="button-logout">Log out</div></Link>
+        <Link to="/login">
+          <div className="button-logout">Log out</div>
+        </Link>
       </div>
     </nav>
   );
