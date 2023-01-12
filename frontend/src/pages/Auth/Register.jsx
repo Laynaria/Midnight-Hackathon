@@ -37,6 +37,11 @@ export default function Register() {
   // function to send the form value to backend
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (registerObject.password !== registerObject.confirm_password) {
+      Notify.error("Passwords do not match");
+      return;
+    }
     AuthService.register(registerObject).then(() => {
       Notify.success("Account created successfully");
     });
