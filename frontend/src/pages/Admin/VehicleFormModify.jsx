@@ -24,14 +24,15 @@ export default function VehicleFormModify() {
   };
 
   const handleSubmit = (event) => {
+    console.log(vehicle);
     event.preventDefault();
-    const data = event.target.value;
+    // const data = event.target.value;
     fetch(`http://localhost:5501/car/${id}`, {
       method: "PUT",
-      headers: {
+      header: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(vehicle),
     })
       .then((response) => response.json())
       .catch((error) => {

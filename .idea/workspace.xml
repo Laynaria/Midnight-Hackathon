@@ -5,6 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTablePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTablePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTablePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTablePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleFormModify.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleFormModify.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/mathieulanglois/GITS/Midnight-Hackathon/frontend/src/pages/Admin",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mathieulanglois/GITS/Midnight-Hackathon/frontend/src/pages/Admin&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/pages/Admin" />

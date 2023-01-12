@@ -11,6 +11,8 @@ import Paper from "@mui/material/Paper";
 import "../../../assets/css/admin/Admin.css";
 import editButton from "../../../assets/img/editButton.svg";
 
+const ApiBaseUrL = import.meta.env.VITE_BACKEND_URL;
+
 const isAvailable = (available) => {
   if (available) {
     return "Yes";
@@ -24,7 +26,7 @@ export default function VehiclesTablePage() {
   const [rows, setRows] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:5501/car")
+    fetch(`${ApiBaseUrL}/car`)
       .then((response) => response.json())
       .then((data) => {
         setRows(data[0]);
