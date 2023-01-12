@@ -7,12 +7,14 @@ import "../../assets/css/admin/Admin.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+const ApiBaseUrL = import.meta.env.VITE_BACKEND_URL;
+
 export default function VehicleFormModify() {
   const { id } = useParams();
   const [vehicle, setVehicle] = React.useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5501/car/${id}`)
+    fetch(`${ApiBaseUrL}/car/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setVehicle(data[0][0]);
@@ -20,14 +22,14 @@ export default function VehicleFormModify() {
   }, []);
 
   const handleChange = (event) => {
-    event.target.value.includes("*") ? "" : setVehicle(event.target.value);
+    setVehicle({ ...vehicle, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
-    console.log(vehicle);
     event.preventDefault();
+    console.log(vehicle);;
     // const data = event.target.value;
-    fetch(`http://localhost:5501/car/${id}`, {
+    fetch(`${ApiBaseUrL}/car/${id}`, {
       method: "PUT",
       header: {
         "Content-Type": "application/json",

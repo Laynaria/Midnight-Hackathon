@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d16742e-be77-493e-9e36-64f851e50991" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTablePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTablePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTablePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTablePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleFormModify.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleFormModify.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
