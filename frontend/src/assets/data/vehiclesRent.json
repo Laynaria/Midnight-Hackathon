@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car2.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car3.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car4.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car2.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car3.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car4.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car2.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car3.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Seltos 5p 2023",
+    "priceStart": "39$",
+    "year": "2023",
+    "passenger": "5",
+    "km": "150 000",
+    "img": "car4.jpg"
+  }
+]
