@@ -1,15 +1,17 @@
 import { useState } from "react";
+import Notify from "@utils/Notification";
+import ContactService from "@services/ContactService";
 
 export default function ContactForm() {
   // state to store the values from the form
   const [contactObject, setContactObject] = useState({
     firstname: "",
     lastname: "",
-    email: "",
+    mail: "",
     phone: "",
     zipcode: "",
-    object: "",
-    message: "",
+    obj: "",
+    msg: "",
   });
 
   // function to register every change from the form in the state
@@ -21,14 +23,27 @@ export default function ContactForm() {
   // function to send the form values as a mail
   const handleSubmit = (e) => {
     e.preventDefault();
-    // add what is needed to send the state contactObject as a mail.
+    if (
+      contactObject.firstname === "" ||
+      contactObject.lastname === "" ||
+      contactObject.mail === "" ||
+      contactObject.phone === "" ||
+      contactObject.zipcode === "" ||
+      contactObject.obj === "" ||
+      contactObject.msg === ""
+    ) {
+      Notify.error("Please fill in all the fields");
+      return;
+    }
+
+    ContactService.send(contactObject).then(() => {
+      Notify.success("Your message has been sent");
+    })
   };
 
   return (
     <form
       className="mx-auto"
-      action=""
-      method="post"
       onSubmit={(e) => handleSubmit(e)}
     >
       <label htmlFor="firstname">
@@ -49,11 +64,11 @@ export default function ContactForm() {
           onChange={handleChange}
         />
       </label>
-      <label htmlFor="email">
+      <label htmlFor="mail">
         <input
           type="email"
-          id="email"
-          name="email"
+          id="mail"
+          name="mail"
           placeholder="Email"
           onChange={handleChange}
         />
@@ -76,21 +91,21 @@ export default function ContactForm() {
           onChange={handleChange}
         />
       </label>
-      <label htmlFor="object">
+      <label htmlFor="obj">
         <input
           type="text"
-          id="object"
-          name="object"
+          id="obj"
+          name="obj"
           placeholder="Object"
           onChange={handleChange}
         />
       </label>
-      <label htmlFor="message">
+      <label htmlFor="msg">
         <textarea
-          id="message"
-          name="message"
+          id="msg"
+          name="msg"
           rows="10"
-          maxLength="500"
+          maxLength="250"
           wrap
           placeholder="Your Message"
           onChange={handleChange}
