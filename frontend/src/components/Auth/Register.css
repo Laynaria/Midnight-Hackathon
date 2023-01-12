@@ -98,6 +98,24 @@
   color: white;
 }
 
+.register-form .buttonClicked {
+  animation: animRegisterButton 0.5s ease;
+}
+
+@keyframes animRegisterButton {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 .bg-img-register {
   background-image: url(../../assets/bg-img/login_background.svg);
   background-position: center center;
