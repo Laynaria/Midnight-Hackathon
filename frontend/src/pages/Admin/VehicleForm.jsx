@@ -17,7 +17,7 @@ export default function VehicleForm() {
         <div className="content">
           <div className="tableItem">
               <div className="headerForm">
-                  <div className="tableTitleVehicles1">Vehicles</div><div className="modifyButton">Save</div>
+                  <div className="tableTitleVehicles1">Model - Immat</div><div className="modifyButton">Save</div>
               </div>
             <div className="adminContentVehicles">
               <div className="titleField1">Brand Name</div>
