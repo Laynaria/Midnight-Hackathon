@@ -1,5 +1,4 @@
 body {
-  background-color: #dcdee2;
   font-family: Montserrat, sans-serif;
 }
 
@@ -294,6 +293,7 @@ main {
 .content {
   display: flex;
   justify-content: space-between;
+  background-color: #dcdee2;
 }
 
 .tableItem {
