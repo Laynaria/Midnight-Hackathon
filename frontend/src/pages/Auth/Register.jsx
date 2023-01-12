@@ -150,6 +150,7 @@ export default function Register() {
               id="postal_code"
               name="postalCode"
               placeholder="Zipcode*"
+              min="0"
               onChange={handleChange}
             />
           </label>
