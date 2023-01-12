@@ -28,18 +28,11 @@ const getVehicleById = (req, res) => {
 };
 
 const updateVehicle = (req, res) => {
-    const sql = "update car set ? where id = ?";
-    const sqlValues = [req.body, req.params.id];
-
+  const car = { ...req.body };
     model
-        .update(sql, sqlValues)
-        .then((result) => {
-        res.send(result);
-        })
-        .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
-        });
-}
+        .update(car)
+        .then((result) => { res.send(result); })
+        .catch((err) => {   console.error(err); res.sendStatus(500); });
+};
 
 module.exports = { getVehicles, getVehicleById, updateVehicle };
