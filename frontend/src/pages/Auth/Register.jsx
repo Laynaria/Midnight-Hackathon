@@ -13,6 +13,7 @@ import "@components/Auth/Register.css";
 
 export default function Register() {
   const [isShown, setIsShown] = useState(false);
+  const [error, setError] = useState(false);
 
   const [registerObject, setRegisterObject] = useState({
     firstname: "",
@@ -40,6 +41,7 @@ export default function Register() {
 
     if (registerObject.password !== registerObject.confirm_password) {
       Notify.error("Passwords do not match");
+      setError(true);
       return;
     }
 
@@ -55,6 +57,7 @@ export default function Register() {
       registerObject.confirm_password === ""
     ) {
       Notify.error("Please fill all the required fields");
+      setError(true);
       return;
     }
 
@@ -83,6 +86,7 @@ export default function Register() {
               id="firstname"
               name="firstname"
               placeholder="Firstname*"
+              className={error ? "error" : ""}
               onChange={handleChange}
             />
           </label>
