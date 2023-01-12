@@ -47,7 +47,4 @@ CREATE TABLE image(
      car_id INT NOT NULL,
      CONSTRAINT fk_image_car
      FOREIGN KEY (car_id)
-     REFERENCES car(id)
-     );
-
-
+     REFERENCES car(id));

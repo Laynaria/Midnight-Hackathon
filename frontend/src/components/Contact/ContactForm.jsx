@@ -8,6 +8,7 @@ export default function ContactForm() {
     email: "",
     phone: "",
     zipcode: "",
+    object: "",
     message: "",
   });
 

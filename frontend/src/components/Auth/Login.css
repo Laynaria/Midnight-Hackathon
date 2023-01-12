@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
+
+.login-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+  font-family: "Montserrat";
+  color: rgba(70, 92, 97, 0.56);
+  background-color: #ffffff;
+}
+
+.login-main .back-arrow {
+  position: fixed;
+  width: 1rem;
+  top: 1rem;
+  left: 1rem;
+}
+
+.login-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 10rem 0;
+}
+
+.login-section img {
+  /* width: 50%; */
+  height: 100px;
+}
+
+.login-section h1 {
+  font-weight: 700;
+  color: #092936;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 19.5rem;
+  gap: 2rem;
+}
+
+.login-form input {
+  width: 100%;
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #324e73;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.login-form p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.login-form p img {
+  height: 18px;
+  width: 22px;
+}
+
+.login-form button[type="submit"] {
+  background-color: #96cd32;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: auto;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.login-main p:nth-of-type(2) {
+  border-bottom: 1px solid #b1bbbd;
+  width: 19.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.login-main p:nth-of-type(2)::before {
+  content: "OR";
+  color: #b1bbbd;
+  position: relative;
+  top: 14px;
+  z-index: 3;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.login-main .link-register {
+  color: #96cd32;
+  border: 1px solid #96cd32;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.bg-img-login {
+  background-image: url(../../assets/bg-img/login_background.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1000px) {
+  .login-main {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .bg-img-login {
+    display: none;
+  }
+}
