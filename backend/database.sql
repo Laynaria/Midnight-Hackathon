@@ -92,7 +92,7 @@ VALUES
 ('mercedes', '75OUI65', '1', 'SUV', 'EQC', 'moving', '100 to 400', '5', 5),
 ('mercedes', '52NON13', '1', 'SUV', 'EQS', 'personal move', '100 to 400', '5', 5),
 ('mercedes', '69XES96', '1', 'SUV', 'EQE SUV', 'stroll', '+400', '5', 5),
-('BMW', '3G58M57', '1', 'berlin', 'i7 xDrive60', 'moving', '100 to 400', '', 5),
+('BMW', '3G58M57', '1', 'berlin', 'i7 xDrive60', 'moving', '100 to 400', '3', 5),
 ('BMW', '57ERTY1', '1', 'berlin', 'iX', 'moving', '100 to 400', '4', 5),
 ('BMW', '12K5J48', '1', 'SUV', 'i4', 'professional move', '50 to 100', '4', 5),
 ('BMW', 'BQU51I7', '1', 'SUV', 'i4 M50', 'stroll', '50 to 100', '4', 5),
@@ -117,35 +117,35 @@ VALUES
 
 INSERT INTO image(name, car_id) 
 VALUES
-('https://www.mercedes-benz.fr/passengercars/mercedes-benz-cars/models/eqe/saloon-v295/design-and-equipment/line-comparison/_jcr_content/comparisonslider/par/comparisonslide_477896184/exteriorImage.MQ6.12.20220316115856.jpeg', 1)
-('https://images.caradisiac.com/logos-ref/modele/modele--renault-zoe/S0-modele--renault-zoe.jpg', 2)
-('https://www.mercedes-benz.fr/passengercars/mercedes-benz-cars/models/eqs/saloon-v297/design/lines/_jcr_content/swipeableteaserbox/par/swipeableteaser/asset.MQ6.12.20220519120322.jpeg', 3)
-('https://cdn.pocket-lint.com/r/s/970x/assets/images/162903-cars-review-mercedes-benz-eqb-300-image1-vhnnkqm4be.jpg', 4)
-('https://www.mercedes-benz.fr/passengercars/mercedes-benz-cars/models/eqa/equipment/equipment-standard/_jcr_content/par/hotspotcontainer_cop/hotspotsimple/image.MQ6.12.20210126154139.jpeg', 5)
-('https://cdn.motor1.com/images/mgl/XWRYE/s1/2020-mercedes-benz-eqc.jpg', 6)
-('https://www.mercedes-benz.fr/passengercars/mercedes-benz-cars/models/eqs/saloon-v297/design/lines/_jcr_content/swipeableteaserbox/par/swipeableteaser/asset.MQ6.12.20220519120322.jpeg', 7)
-('https://sf1.autoplus.fr/wp-content/uploads/autoplus/2022/10/53-mercedes-eqe-suv-001.jpg', 8)
-('https://www.turbo.fr/sites/default/files/2022-04/BMW-i7-14.jpg', 9)
-('https://www.challenges.fr/assets/img/2021/09/24/cover-r4x3w1200-614e06b0081f3-bmw-ix-xdrive-i50-sophisto-grey-024-resultat-jpeg.jpg', 10)
-('https://www.bmw.fr/content/dam/bmw/common/all-models/i-series/i4/onepager-new/bmw-i4-edrive-40-onepager-gallery-i4-exterior-videos-02.jpg', 11)
-('https://medias.blogbmw.fr/2021/06/BMW-i4-M50-2021-1.jpg', 12)
-('https://images.caradisiac.com/images/9/1/3/9/199139/S1-essai-bmw-ix1-xdrive30-2022-si-logique-electrique-735063.jpg', 13)
-('https://images.caradisiac.com/logos/1/8/0/0/271800/S7-essai-video-bmw-ix3-2022-le-choix-raisonnable-196294.jpg', 14)
-('https://cdn.motor1.com/images/mgl/rMbNx/s3/tesla-model-3-autonomie-standard-plus.jpg', 15)
-('https://cdn.automobile-propre.com/uploads/2012/01/Tesla-Model-X-2021-6.jpg', 16)
-('https://ccfa.fr/wp-content/uploads/2020/11/tesla-model-y.jpg', 17)
-('https://images.bfmtv.com/CIYma91hTKMpzbuIy-xXXekzKyw=/0x0:2048x1542/2048x0/images/Tesla-Model-S-Plaid-1540554.jpg', 18)
-('https://images.frandroid.com/wp-content/uploads/2022/01/leaf10-sv-018.jpg', 19)
-('https://ev-database.org/img/auto/Volkswagen_e-Golf-2017/Volkswagen_e-Golf-2017-01@2x.jpg', 20)
-('https://images.caradisiac.com/logos/7/6/1/1/257611/S8-essai-volkswagen-e-up-une-vraie-citadine-electrique-enfin-en-vente-libre-180109.jpg', 21)
-('https://images.frandroid.com/wp-content/uploads/2022/11/volkswagen-id-buzz-volkswagen-00016.jpg', 22)
-('https://www.automobile-propre.com/wp-content/uploads/2018/03/I.D._VIZZION_Concept-8006.jpg', 23)
-('https://www.largus.fr/images/images/e-crafter-20180826004.jpg', 24)
-('https://images.caradisiac.com/images/6/6/8/2/196682/S1-essai-video-volkswagen-id-5-718029.jpg', 25)
-('https://images.caradisiac.com/logos/6/4/7/6/256476/S8-essai-peugeot-e-208-a-l-assaut-de-la-renault-zoe-178750.jpg', 26)
-('https://sf2.auto-moto.com/wp-content/uploads/sites/9/2020/04/peugeot-e-2008.jpeg', 27)
-('https://cdn.automobile-propre.com/uploads/2021/02/Peugeot-e-Rifter-electrique-2021-02.jpg', 28)
-('https://www.largus.fr/images/images/peugeot-e-traveller-7.jpg', 29)
+('https://images.caradisiac.com/images/5/5/4/1/195541/S1-essai-video-mercedes-eqe-mini-eqs-711724.jpg', 1),
+('https://images.caradisiac.com/logos-ref/modele/modele--renault-zoe/S0-modele--renault-zoe.jpg', 2),
+('https://cdn.automobile-propre.com/uploads/2021/04/Mercedes-EQS-2021-02.jpg', 3),
+('https://cdn.pocket-lint.com/r/s/970x/assets/images/162903-cars-review-mercedes-benz-eqb-300-image1-vhnnkqm4be.jpg', 4),
+('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7DSDde3DG6DcE5Xz_QiqGhAma2NM6kJI2RQ&usqp=CAU', 5),
+('https://cdn.motor1.com/images/mgl/XWRYE/s1/2020-mercedes-benz-eqc.jpg', 6),
+('https://blog.vivacar.fr/wp-content/uploads/2022/01/Mercedes-EQS.webp', 7),
+('https://sf1.autoplus.fr/wp-content/uploads/autoplus/2022/10/53-mercedes-eqe-suv-001.jpg', 8),
+('https://www.turbo.fr/sites/default/files/2022-04/BMW-i7-14.jpg', 9),
+('https://www.challenges.fr/assets/img/2021/09/24/cover-r4x3w1200-614e06b0081f3-bmw-ix-xdrive-i50-sophisto-grey-024-resultat-jpeg.jpg', 10),
+('https://www.bmw.fr/content/dam/bmw/common/all-models/i-series/i4/onepager-new/bmw-i4-edrive-40-onepager-gallery-i4-exterior-videos-02.jpg', 11),
+('https://medias.blogbmw.fr/2021/06/BMW-i4-M50-2021-1.jpg', 12),
+('https://images.caradisiac.com/images/9/1/3/9/199139/S1-essai-bmw-ix1-xdrive30-2022-si-logique-electrique-735063.jpg', 13),
+('https://images.caradisiac.com/logos/1/8/0/0/271800/S7-essai-video-bmw-ix3-2022-le-choix-raisonnable-196294.jpg', 14),
+('https://cdn.motor1.com/images/mgl/rMbNx/s3/tesla-model-3-autonomie-standard-plus.jpg', 15),
+('https://cdn.automobile-propre.com/uploads/2012/01/Tesla-Model-X-2021-6.jpg', 16),
+('https://ccfa.fr/wp-content/uploads/2020/11/tesla-model-y.jpg', 17),
+('https://images.bfmtv.com/CIYma91hTKMpzbuIy-xXXekzKyw=/0x0:2048x1542/2048x0/images/Tesla-Model-S-Plaid-1540554.jpg', 18),
+('https://images.frandroid.com/wp-content/uploads/2022/01/leaf10-sv-018.jpg', 19),
+('https://ev-database.org/img/auto/Volkswagen_e-Golf-2017/Volkswagen_e-Golf-2017-01@2x.jpg', 20),
+('https://images.caradisiac.com/logos/7/6/1/1/257611/S8-essai-volkswagen-e-up-une-vraie-citadine-electrique-enfin-en-vente-libre-180109.jpg', 21),
+('https://images.frandroid.com/wp-content/uploads/2022/11/volkswagen-id-buzz-volkswagen-00016.jpg', 22),
+('https://www.automobile-propre.com/wp-content/uploads/2018/03/I.D._VIZZION_Concept-8006.jpg', 23),
+('https://www.largus.fr/images/images/e-crafter-20180826004.jpg', 24),
+('https://images.caradisiac.com/images/6/6/8/2/196682/S1-essai-video-volkswagen-id-5-718029.jpg', 25),
+('https://images.caradisiac.com/logos/6/4/7/6/256476/S8-essai-peugeot-e-208-a-l-assaut-de-la-renault-zoe-178750.jpg', 26),
+('https://sf2.auto-moto.com/wp-content/uploads/sites/9/2020/04/peugeot-e-2008.jpeg', 27),
+('https://cdn.automobile-propre.com/uploads/2021/02/Peugeot-e-Rifter-electrique-2021-02.jpg', 28),
+('https://www.largus.fr/images/images/peugeot-e-traveller-7.jpg', 29),
 ('https://images.caradisiac.com/images/9/6/6/7/199667/S0-la-renault-megane-e-tech-a-39-000eur-en-donne-t-elle-pour-son-argent-738524.jpg', 30);
 
 
