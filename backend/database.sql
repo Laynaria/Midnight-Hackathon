@@ -29,11 +29,7 @@ CREATE TABLE car(
      model VARCHAR(50) NOT NULL,
      ideal_object VARCHAR(50) NOT NULL,
      ideal_distance VARCHAR(50) NOT NULL,
-     ideal_places VARCHAR(50) NOT NULL,
-     user_id INT NOT NULL,
-     CONSTRAINT fk_car_user
-     FOREIGN KEY (user_id)
-     REFERENCES user(id));
+     ideal_places VARCHAR(50) NOT NULL);
 
 CREATE TABLE bookings(
      id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -82,38 +78,38 @@ VALUES
 ('admin', 'controle', 'admin@gmail.com', 'admin007', '0672133145', '1 rue admin', '17000', 'La Rochelle', '1', '1'); 
 
 
-INSERT INTO car (brand, matriculation, is_available, type, model, ideal_object, ideal_distance, ideal_places, user_id) 
+INSERT INTO car (brand, matriculation, is_available, type, model, ideal_object, ideal_distance, ideal_places) 
 VALUES 
-('mercedes', '597B9PL', '1', 'berlin', 'EQE', 'Moving', '100 to 400', '5', 2),
-('renault', '235F8ET', '1', 'urbanite', 'zoe', 'professional move', '0 to 50', '2', 2),
-('mercedes', '23PF8H6', '1', 'berlin', 'EQS', 'personal move', '+400', '4', 2),
-('mercedes', '87POL62', '1', 'SUV', 'EQB', 'moving', '+400', '1', 2),
-('mercedes', '57MIB00', '1', 'SUV', 'EQA', 'stroll', '50 to 100', '3', 2),
-('mercedes', '75OUI65', '1', 'SUV', 'EQC', 'moving', '100 to 400', '5', 5),
-('mercedes', '52NON13', '1', 'SUV', 'EQS', 'personal move', '100 to 400', '5', 5),
-('mercedes', '69XES96', '1', 'SUV', 'EQE SUV', 'stroll', '+400', '5', 5),
-('BMW', '3G58M57', '1', 'berlin', 'i7 xDrive60', 'moving', '100 to 400', '3', 5),
-('BMW', '57ERTY1', '1', 'berlin', 'iX', 'moving', '100 to 400', '4', 5),
-('BMW', '12K5J48', '1', 'SUV', 'i4', 'professional move', '50 to 100', '4', 5),
-('BMW', 'BQU51I7', '1', 'SUV', 'i4 M50', 'stroll', '50 to 100', '4', 5),
-('BMW', '24CHE2B', '1', 'berlin', 'iX1', 'personal move', '0 to 50', '3', 5),
-('BMW', 'SHEE5SH', '1', 'SUV', 'iX3', 'personal move', '50 to 100', '3', 2),
-('TESLA', 'CH3R138', '1', 'berlin', 'model 3', 'stroll', '+400', '3', 4),
-('TESLA', 'F3R14S0', '1', 'family', 'model x', 'personal move', '+400', '5', 3),
-('TESLA', 'M4PP4ST', '1', 'SUV', 'model y', 'moving', '+400', '4', 3),
-('TESLA', 'L1NKD1N', '1', 'sport', 'model s', 'moving', '+400', '2', 4),
-('nissan', 'F4C3B0K', '1', 'family', 'leaf', 'personal move', '+400', '5', 4),
-('volkswagen', '1NS14GR', '1', 'urbanite', 'e-golf', 'professional move', '0 to 50', '3', 3),
-('volkswagen', 'T0U1KV', '1', 'urbanite', 'e-UP', 'professional move', '0 to 50', '3', 4),
-('volkswagen', 'V01RD3V', '1', 'family', 'ID Buzz', 'personal move', '100 to 400', '5', 8),
-('volkswagen', 'V4L0R41', '1', 'berlin', 'ID Vizzion', 'stroll', '+400', '4', 3),
-('volkswagen', 'L34GU3L', '1', 'utility', 'e-Crafter', 'professional move', '50 to 100', '2', 9),
-('volkswagen', 'L4UR3AT', '1', 'SUV', 'ID5', 'personal move', '100 to 400', '5', 8),
-('peugeot', 'CH4MP10', '1', 'urbanite', 'e-208', 'professional move', '0 to 50', '2', 3),
-('peugeot', 'P1GN0NS', '1', 'family', 'e-2008', 'personal move', '100 to 400', '5', 9),
-('peugeot', 'P4N4M41', '1', 'utility', 'e-RIFTER', 'professional move', '50 to 100', '4', 8),
-('peugeot', 'P01NT33', '1', 'family', 'e-TRAVELLER', 'stroll', '100 to 400', '5', 9),
-('renault', 'P01NT3R', '1', 'berlin', 'megane e-tech', 'personal move', '100 to 400', '4', 3);
+('mercedes', '597B9PL', '1', 'berlin', 'EQE', 'Moving', '100 to 400', '5'),
+('renault', '235F8ET', '1', 'urbanite', 'zoe', 'professional move', '0 to 50', '2'),
+('mercedes', '23PF8H6', '1', 'berlin', 'EQS', 'personal move', '+400', '4'),
+('mercedes', '87POL62', '1', 'SUV', 'EQB', 'moving', '+400', '1'),
+('mercedes', '57MIB00', '1', 'SUV', 'EQA', 'stroll', '50 to 100', '3'),
+('mercedes', '75OUI65', '1', 'SUV', 'EQC', 'moving', '100 to 400', '5'),
+('mercedes', '52NON13', '1', 'SUV', 'EQS', 'personal move', '100 to 400', '5'),
+('mercedes', '69XES96', '1', 'SUV', 'EQE SUV', 'stroll', '+400', '5'),
+('BMW', '3G58M57', '1', 'berlin', 'i7 xDrive60', 'moving', '100 to 400', '3'),
+('BMW', '57ERTY1', '1', 'berlin', 'iX', 'moving', '100 to 400', '4'),
+('BMW', '12K5J48', '1', 'SUV', 'i4', 'professional move', '50 to 100', '4'),
+('BMW', 'BQU51I7', '1', 'SUV', 'i4 M50', 'stroll', '50 to 100', '4'),
+('BMW', '24CHE2B', '1', 'berlin', 'iX1', 'personal move', '0 to 50', '3'),
+('BMW', 'SHEE5SH', '1', 'SUV', 'iX3', 'personal move', '50 to 100', '3'),
+('TESLA', 'CH3R138', '1', 'berlin', 'model 3', 'stroll', '+400', '3'),
+('TESLA', 'F3R14S0', '1', 'family', 'model x', 'personal move', '+400', '5'),
+('TESLA', 'M4PP4ST', '1', 'SUV', 'model y', 'moving', '+400', '4'),
+('TESLA', 'L1NKD1N', '1', 'sport', 'model s', 'moving', '+400', '2'),
+('nissan', 'F4C3B0K', '1', 'family', 'leaf', 'personal move', '+400', '5'),
+('volkswagen', '1NS14GR', '1', 'urbanite', 'e-golf', 'professional move', '0 to 50', '3'),
+('volkswagen', 'T0U1KV', '1', 'urbanite', 'e-UP', 'professional move', '0 to 50', '3'),
+('volkswagen', 'V01RD3V', '1', 'family', 'ID Buzz', 'personal move', '100 to 400', '5'),
+('volkswagen', 'V4L0R41', '1', 'berlin', 'ID Vizzion', 'stroll', '+400', '4'),
+('volkswagen', 'L34GU3L', '1', 'utility', 'e-Crafter', 'professional move', '50 to 100', '2'),
+('volkswagen', 'L4UR3AT', '1', 'SUV', 'ID5', 'personal move', '100 to 400', '5'),
+('peugeot', 'CH4MP10', '1', 'urbanite', 'e-208', 'professional move', '0 to 50', '2'),
+('peugeot', 'P1GN0NS', '1', 'family', 'e-2008', 'personal move', '100 to 400', '5'),
+('peugeot', 'P4N4M41', '1', 'utility', 'e-RIFTER', 'professional move', '50 to 100', '4'),
+('peugeot', 'P01NT33', '1', 'family', 'e-TRAVELLER', 'stroll', '100 to 400', '5'),
+('renault', 'P01NT3R', '1', 'berlin', 'megane e-tech', 'personal move', '100 to 400', '4');
 
 INSERT INTO image(name, car_id) 
 VALUES
