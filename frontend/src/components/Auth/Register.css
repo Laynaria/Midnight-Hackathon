@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
 
-@keyframes slidein {
+@keyframes animRegister {
   from {
-    margin-top: 0rem;
+    transform: translateX(-500px);
   }
 
   to {
-    margin-top: 0rem;
+    transform: translateX(0px);
   }
 }
 
@@ -24,6 +24,7 @@
   width: 1rem;
   top: 1rem;
   left: 1rem;
+  animation: animRegister 1s ease;
 }
 
 .register-section {
@@ -32,6 +33,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  animation: animRegister 1s ease;
 }
 
 .register-section img {
