@@ -73,7 +73,60 @@ body {
   border-right: none;
 }
 
+.vehicleDetail {
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 80vw;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.52);
+  text-align: left;
+}
+
+.vehicleDetailTitle {
+  padding: 1rem;
+}
+
+.vehicleDetailTitle div:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.vehicleDetailTitle div:nth-of-type(2) {
+  color: #a9a9a9;
+}
+
+.vehicleDetailContent li {
+  border-bottom: 2px rgb(209, 209, 209) dotted;
+  padding: 0.4rem 1rem;
+}
+
+.vehicleDetailFoot {
+  padding: 1rem;
+  background-color: #092936;
+  color: #fff;
+}
+
+.vehiclePageTitle {
+  margin-top: 10rem;
+  font-size: 3em;
+  font-family: "Monserrat";
+}
+
 @media screen AND (min-width: 850px) {
+  .vehicleDetail {
+    display: flex;
+    width: fit-content;
+  }
+
+  .vehicleDetail img {
+    width: 40vw;
+  }
+
+  .vehicleDetailContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .lastRent {
     padding: 6rem;
   }

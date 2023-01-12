@@ -11,13 +11,15 @@ import "../../../assets/css/admin/Admin.css";
 import { Link } from "react-router-dom";
 import editButton from "../../../assets/img/editButton.svg";
 
+const ApiBaseUrL = import.meta.env.VITE_BACKEND_URL;
+
 export default function UsersTablePage() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [rows, setRows] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:5501/user")
+    fetch(`${ApiBaseUrL}/user`)
       .then((response) => response.json())
       .then((data) => {
         setRows(data[0]);
@@ -66,7 +68,7 @@ export default function UsersTablePage() {
                   <TableCell align="left">{row.postal_code}</TableCell>
                   <TableCell align="left">{row.city}</TableCell>
                   <TableCell align="left">
-                    <Link to="/admin/vehicles/:id">
+                    <Link to={`/admin/users/${row.id}`}>
                       <img
                         className="editButton"
                         src={editButton}

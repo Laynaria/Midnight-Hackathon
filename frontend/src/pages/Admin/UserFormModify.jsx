@@ -9,24 +9,24 @@ import { useParams } from "react-router-dom";
 
 const ApiBaseUrL = import.meta.env.VITE_BACKEND_URL;
 
-export default function VehicleFormModify() {
+export default function UserFormModify() {
   const { id } = useParams();
-  const [vehicle, setVehicle] = React.useState({});
+  const [user, setUser] = React.useState({});
 
   useEffect(() => {
-    fetch(`${ApiBaseUrL}/car/${id}`)
+    fetch(`${ApiBaseUrL}/user/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setVehicle(data[0][0]);
+        setUser(data[0][0]);
       });
   }, []);
 
   const handleChange = (event) => {
-    setVehicle({ ...vehicle, [event.target.name]: event.target.value });
+    setUser({ ...user, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
-    console.log(vehicle);
+    console.log(user);
     event.preventDefault();
     // const data = event.target.value;
     fetch(`${ApiBaseUrL}/car/${id}`, {
@@ -34,7 +34,7 @@ export default function VehicleFormModify() {
       header: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(vehicle),
+      body: JSON.stringify(user),
     })
       .then((response) => response.json())
       .catch((error) => {
@@ -51,7 +51,7 @@ export default function VehicleFormModify() {
           <div className="tableItem">
             <div className="headerForm">
               <div className="tableTitleVehicles1">
-                {vehicle.model} - {vehicle.matriculation}
+                {user.firstname} - {user.lastname}
               </div>
               <button
                 type="submit"
@@ -62,77 +62,74 @@ export default function VehicleFormModify() {
               </button>
             </div>
             <div className="adminContentVehicles">
-              <div className="titleField1">Brand Name</div>
+              <div className="titleField1">First Name</div>
               <input
                 className="form"
                 type="text"
-                name="brand"
-                placeholder="Brand"
-                value={vehicle.brand}
+                name="firstname"
+                placeholder="First Name"
+                value={user.firstname}
                 onChange={handleChange}
               />
             </div>
-            <div className="titleField">Model</div>
+            <div className="titleField">Last Name</div>
             <input
               className="form"
               type="text"
-              name="model"
-              placeholder="Model"
-              value={vehicle.model}
-            />
-            <div className="titleField">Immatriculation</div>
-            <input
-              className="form"
-              type="text"
-              name="immat"
-              placeholder="Immatriculation"
-              value={vehicle.matriculation}
+              name="lastname"
+              placeholder="Last Name"
+              value={user.lastname}
               onChange={handleChange}
             />
-            <div className="titleField">Capacity</div>
+            <div className="titleField">Address</div>
             <input
               className="form"
               type="text"
-              name="capacity"
-              placeholder="Capacity"
-              value={vehicle.ideal_places}
+              name="address"
+              placeholder="Address"
+              value={user.address}
               onChange={handleChange}
             />
-            <div className="titleField">Autonomy</div>
+            <div className="titleField">Code Postal</div>
+            <input
+              className="form"
+              type="text"
+              name="postalCode"
+              placeholder="Postal Code"
+              value={user.postalCode}
+              onChange={handleChange}
+            />
+            <div className="titleField">City</div>
             <input
               className="form"
               form
               type="text"
-              name="autonomy"
-              placeholder="Autonomy"
-              value={vehicle.ideal_distance}
+              name="city"
+              placeholder="City"
+              value={user.city}
               onChange={handleChange}
             />
-            <div className="titleField">Objectif</div>
+            <div className="titleField">Phone</div>
             <input
               className="form"
               form
               type="text"
-              name="objectif"
-              placeholder="objectif"
-              value={vehicle.ideal_object}
+              name="cellphone"
+              placeholder="Phone"
+              value={user.cellphone}
               onChange={handleChange}
+            />
+            <div className="titleField">Mail</div>
+            <input
+                className="form"
+                form
+                type="text"
+                name="mail"
+                placeholder="Email"
+                value={user.mail}
+                onChange={handleChange}
             />
             <div className="tableTitleVehicles">Avaibility</div>
-            <div className="adminCalendar">
-              <div className="adminContentVehicles">
-                <div className="titleField1">Avaibility</div>
-                <input
-                  className="form"
-                  type="boolean"
-                  name="is_available"
-                  placeholder="is_available"
-                  value={vehicle.is_available}
-                  onChange={handleChange}
-                />
-              </div>
-              <Calendar />
-            </div>
             <div className="tableTitleVehicles">Picture</div>
           </div>
         </div>
