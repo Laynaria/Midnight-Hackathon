@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
+
+.error-notfound {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15rem;
+}
+
+.error-notfound button[type="button"] {
+  background-color: #96cd32;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: auto;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.error-notfound h1 {
+  font-size: 5rem;
+  color: #96cd32;
+  margin-bottom: 2rem;
+}
+
+.error-notfound h2 {
+  font-size: 2rem;
+  color: #96cd32;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 750px) {
+  .error-notfound {
+    margin: 5rem;
+  }
+}
