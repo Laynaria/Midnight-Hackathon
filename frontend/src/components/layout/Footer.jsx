@@ -14,9 +14,9 @@ export default function Footer() {
       <div className="footmob">
         <div className="triangle">montretoi</div>
         <div className="reseau">
-          <img alt="logo" src={instaicon} />
-          <img alt="logo" src={fbicon} />
-          <img alt="logo" src={linkdinicon} />
+          <img alt="logo" className="reso" src={instaicon} />
+          <img alt="logo" className="reso" src={fbicon} />
+          <img alt="logo" className="reso" src={linkdinicon} />
         </div>
       </div>
     </footer>

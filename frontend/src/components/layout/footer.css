@@ -1,22 +1,23 @@
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   max-width: 100%;
+  max-height: 80px;
   background-color: #092936;
 }
 
 .triangle {
   color: #8bc95b;
+  background-color: #8bc95b;
   -webkit-clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
   clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
-  right: 0;
-  height: 80px;
   width: 40%;
-  background-color: #8bc95b;
+  height: 80px;
   position: absolute;
   z-index: 1;
+  right: 0;
 }
 
 .footext {
@@ -28,18 +29,22 @@
 .voiture {
   max-width: 140px;
   max-height: 80px;
+  margin-left: 5rem;
 }
 
 .reseau {
   display: flex;
-  flex-direction: row;
-  max-width: 80px;
-  max-height: 80px;
+  gap: 1rem;
   position: relative;
-  z-index: 2;
+  z-index: 2; 
+  margin-right: 5rem;
 }
 
-@media screen and (max-width: 1610px) {
+.reso {
+  height: 50px;
+}
+
+@media screen and (max-width: 480px) {
   .footer {
     justify-content: space-between;
     flex-direction: column;
