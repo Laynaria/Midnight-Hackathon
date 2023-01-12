@@ -339,6 +339,12 @@ main {
   margin: 0 0 1.5rem 1.5rem;
 }
 
+.tableTitleVehicles1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 1.5rem;
+}
+
 .tableContentVehicles {
   width: 100%;
   height: auto;
@@ -531,4 +537,53 @@ main {
   font-size: 1rem;
   text-decoration: underline;
   color: #8bc95b;
+}
+
+/* Form */
+
+.titleField {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.titleField1 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+.form {
+    width: 30rem;
+    height: 2.5rem;
+    border: 1px #324e7371 solid;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  margin-left: 1.5rem;
+    padding: 0 1rem;
+}
+
+.headerForm {
+  display: flex;
+  align-items: flex-start;
+    justify-content: space-between;
+  border-bottom: 1px #cfcfcf solid;
+}
+
+.adminCalendar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modifyButton {
+  background-color: #8bc95b;
+  width: 5rem;
+  font-size: 1rem;
+  text-align: center;
+  color : #fff;
+  border-radius: 0.3rem;
 }
