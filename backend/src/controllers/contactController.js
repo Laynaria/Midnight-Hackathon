@@ -4,7 +4,6 @@ const postContact = async (req, res) => {
   const contact = {
     ...req.body,
   };
-  // de save mon user en bdd
   model
     .insert(contact)
     .then(() => {
