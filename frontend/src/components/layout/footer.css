@@ -8,15 +8,15 @@
 }
 
 .triangle {
-    color: #8bc95b;
-    -webkit-clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
-clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
-    right: 0;
-    height: 80px;
-    width: 40%;
-    background-color: #8bc95b;
-    position: absolute;
-    z-index: 1;
+  color: #8bc95b;
+  -webkit-clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
+  clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
+  right: 0;
+  height: 80px;
+  width: 40%;
+  background-color: #8bc95b;
+  position: absolute;
+  z-index: 1;
 }
 
 p {
@@ -40,29 +40,33 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-    .footer {
-        justify-content: space-between;
-        flex-direction: column;
-        height: 200px;
-    }
+  .footer {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 200px;
+  }
 
-    .triangle {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-     bottom: -38rem;
-     height: 70px;
-     width: 100%;
-    }
+  .triangle {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    height: 70px;
+    width: 100%;
+  }
+  
+  .footmob {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-    .reseau {
-       margin-right: 40%;
-       height: 60px;
-       
-    }
+  .reseau {
+    margin-right: 25%;
+    height: 60px;
+  }
 
-    .voiture {
-        height: 60px;
-        width: 7rem;
-    }
-
+  .voiture {
+    height: 60px;
+    width: 7rem;
+  }
 }

@@ -9,11 +9,13 @@ export default function Footer() {
     <footer className="footer">
       <img className="voiture" alt="logo" src={voiture} />
       <p>Copyright © 2023 Green Rent - All rights reserved</p>
-      <div className="triangle">montretoi</div>
-      <div className="reseau">
-        <img alt="logo" src={instaicon} />
-        <img alt="logo" src={fbicon} />
-        <img alt="logo" src={linkdinicon} />
+      <div className="footmob">
+        <div className="triangle">montretoi</div>
+        <div className="reseau">
+          <img alt="logo" src={instaicon} />
+          <img alt="logo" src={fbicon} />
+          <img alt="logo" src={linkdinicon} />
+        </div>
       </div>
     </footer>
   );
