@@ -7,15 +7,15 @@ class ContactModel {
 
   insert(contact) {
     return connection.query(
-      `insert into ${this.table} (firstname, lastname, email, phone, zipcode, object, message) value (?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (firstname, lastname, mail, phone, zipcode, obj, msg) value (?, ?, ?, ?, ?, ?, ?)`,
       [
         contact.firstname,
         contact.lastname,
-        contact.email,
+        contact.mail,
         contact.phone,
         contact.zipcode,
-        contact.object,
-        contact.message,
+        contact.obj,
+        contact.msg,
       ]
     );
   }
