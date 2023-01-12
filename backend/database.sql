@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS contact;
 DROP TABLE IF EXISTS image;
 DROP TABLE IF EXISTS bookings;
 DROP TABLE IF EXISTS car;
@@ -55,12 +56,30 @@ CREATE TABLE image(
      FOREIGN KEY (car_id)
      REFERENCES car(id));
 
+CREATE TABLE contact(
+     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+     firstname VARCHAR(50) NOT NULL,
+     lastname VARCHAR(50) NOT NULL,
+     mail VARCHAR(50) NOT NULL,
+     phone VARCHAR(20),
+     zipcode VARCHAR(10),
+     obj VARCHAR(50),
+     msg VARCHAR(255),
+     is_read TINYINT(1));     
+
 
 INSERT INTO user (firstname, lastname, mail, password, cellphone, address, postal_code, city, is_renter, is_admin) 
 VALUES 
 ('john', 'doe', 'john@doe.com', 'john33000', '0546856852', '1 rue gambetta', '33000', 'Bordeaux', '0', '0'), 
 ('elie', 'parthenay', 'elie@yahoo.com', 'eliepart', '0623586957', '520 chemin de la glande', '29000', 'Brest', '1', '1'),
-('julien', 'grellier', 'grellier@julien.com', 'jugre', '0672311366', '2 rue pagnolet', '33000', 'bordeaux', '1', '1');  
+('julien', 'grellier', 'grellier@julien.com', 'jugre', '0672311366', '2 rue pagnolet', '33000', 'bordeaux', '1', '1'),
+('mathieu', 'langlois', 'mlgs45@gmail.com', 'mlgs45', '0789278865', '56 rue des grincheux', '75000', 'Paris', '1', '1'),
+('eric', 'delahouse', 'erdlh@msn.fr', '', '', '', '', '', '', ''),
+('', '', '', '', '', '', '', '', '', ''),
+('', '', '', '', '', '', '', '', '', ''),  
+('', '', '', '', '', '', '', '', '', ''),
+('', '', '', '', '', '', '', '', '', ''),
+('', '', '', '', '', '', '', '', '', ''); 
 
 
 INSERT INTO car (brand, matriculation, is_available, type, model, ideal_object, ideal_distance, ideal_places, user_id) 
@@ -69,7 +88,32 @@ VALUES
 ('renault', '235F8ERT', '1', 'urbanite', 'zoe', 'professional move', '0 to 50', '2', 2),
 ('mercedes', '23PF86', '1', 'berlin', 'EQS', 'personal move', '+400', '4', 2),
 ('mercedes', '87POL62', '1', 'SUV', 'EQB', 'moving', '+400', '1', 2),
-('mercedes', '57MIB00', '1', 'SUV', 'EQA', 'stroll', '50 to 100', '3', 2);
+('mercedes', '57MIB00', '1', 'SUV', 'EQA', 'stroll', '50 to 100', '3', 2),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', ),
+('', '', '', '', '', '', '', '', );
 
 
 -- INSERT INTO user (firstname, lastname, mail, password, cellphone, address, postal_code, city, is_renter, is_admin) 
