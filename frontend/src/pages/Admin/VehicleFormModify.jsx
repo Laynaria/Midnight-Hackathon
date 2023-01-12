@@ -7,17 +7,37 @@ import "../../assets/css/admin/Admin.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-export default function VehicleForm() {
-  const id = useParams();
+export default function VehicleFormModify() {
+  const { id } = useParams();
   const [vehicle, setVehicle] = React.useState({});
 
   useEffect(() => {
     fetch(`http://localhost:5501/car/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setVehicle(data);
+        setVehicle(data[0][0]);
       });
   }, []);
+
+  const handleChange = (event) => {
+    event.target.value.includes("*") ? "" : setVehicle(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = event.target.value;
+    fetch(`http://localhost:5501/car/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
 
   return (
     <div className="admin">
@@ -30,7 +50,13 @@ export default function VehicleForm() {
               <div className="tableTitleVehicles1">
                 {vehicle.model} - {vehicle.matriculation}
               </div>
-              <div className="modifyButton">Save</div>
+              <button
+                type="submit"
+                className="modifyButton"
+                onClick={handleSubmit}
+              >
+                Save
+              </button>
             </div>
             <div className="adminContentVehicles">
               <div className="titleField1">Brand Name</div>
@@ -38,7 +64,9 @@ export default function VehicleForm() {
                 className="form"
                 type="text"
                 name="brand"
-                placeholder="Brand Name"
+                placeholder="Brand"
+                value={vehicle.brand}
+                onChange={handleChange}
               />
             </div>
             <div className="titleField">Model</div>
@@ -47,6 +75,7 @@ export default function VehicleForm() {
               type="text"
               name="model"
               placeholder="Model"
+              value={vehicle.model}
             />
             <div className="titleField">Immatriculation</div>
             <input
@@ -54,6 +83,8 @@ export default function VehicleForm() {
               type="text"
               name="immat"
               placeholder="Immatriculation"
+              value={vehicle.matriculation}
+              onChange={handleChange}
             />
             <div className="titleField">Capacity</div>
             <input
@@ -61,6 +92,8 @@ export default function VehicleForm() {
               type="text"
               name="capacity"
               placeholder="Capacity"
+              value={vehicle.ideal_places}
+              onChange={handleChange}
             />
             <div className="titleField">Autonomy</div>
             <input
@@ -69,6 +102,8 @@ export default function VehicleForm() {
               type="text"
               name="autonomy"
               placeholder="Autonomy"
+              value={vehicle.ideal_distance}
+              onChange={handleChange}
             />
             <div className="titleField">Objectif</div>
             <input
@@ -77,6 +112,8 @@ export default function VehicleForm() {
               type="text"
               name="objectif"
               placeholder="objectif"
+              value={vehicle.ideal_object}
+              onChange={handleChange}
             />
             <div className="tableTitleVehicles">Avaibility</div>
             <div className="adminCalendar">

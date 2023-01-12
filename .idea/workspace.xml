@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8d16742e-be77-493e-9e36-64f851e50991" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -21,30 +23,33 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KBVycv2zYqAtYVM9Ntb7LL6rMK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mathieulanglois/GITS/Hackaton-Midnight/frontend/src/components/Admin/Tables&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/mathieulanglois/GITS/Midnight-Hackathon/frontend/src/pages/Admin",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/src/components/Admin/Tables" />
       <recent name="$PROJECT_DIR$/frontend/src/pages/Admin" />
+      <recent name="$PROJECT_DIR$/frontend/src/components/Admin/Tables" />
+      <recent name="$PROJECT_DIR$/backend/src/routes" />
+      <recent name="$PROJECT_DIR$/backend/src/models" />
+      <recent name="$PROJECT_DIR$/backend/src/controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/assets/img" />
@@ -62,6 +67,9 @@
       <workItem from="1673450142515" duration="15197000" />
       <workItem from="1673470211425" duration="7289000" />
       <workItem from="1673510223808" duration="282000" />
+      <workItem from="1673522651907" duration="6397000" />
+      <workItem from="1673534345882" duration="31000" />
+      <workItem from="1673534404666" duration="15142000" />
     </task>
     <servers />
   </component>

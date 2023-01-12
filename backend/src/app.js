@@ -6,7 +6,11 @@ const cookieParser = require("cookie-parser");
 
 const authRouter = require("./routes/authRouter");
 const fileRouter = require("./routes/fileRouter");
+const vehicleRouter = require("./routes/vehicleRouter");
+const userRouter = require("./routes/userRouter");
+
 const contactRouter = require("./routes/contactRouter");
+
 const authMiddleware = require("./middleware/authMiddleware");
 // ce middleware me permet de récuperer le corp json
 app.use(express.json());
@@ -20,6 +24,8 @@ app.use(
 );
 
 app.use(fileRouter);
+app.use(userRouter);
+app.use(vehicleRouter);
 app.use(contactRouter);
 app.use("/auth", authRouter);
 

@@ -225,6 +225,7 @@ main {
 
 .adminContent {
   padding: 1rem;
+  background-color: #dcdee2;
 }
 
 .kpiContent {
@@ -293,7 +294,6 @@ main {
 .content {
   display: flex;
   justify-content: space-between;
-  background-color: #dcdee2;
 }
 
 .tableItem {
