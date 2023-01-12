@@ -12,7 +12,7 @@ body {
 /*
 * HEADER
 */
-header {
+.headerAdmin {
   height: 4.5rem;
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
