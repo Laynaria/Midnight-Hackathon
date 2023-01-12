@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
 
+@keyframes slidein {
+  from {
+    margin-top: 0rem;
+  }
+
+  to {
+    margin-top: 0rem;
+  }
+}
+
 .register-main {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -54,6 +64,14 @@
   border-radius: 5px;
   padding: 0.5rem;
   outline: none;
+}
+
+.register-form input:focus {
+  border: 1px solid #96cd32;
+}
+
+.register-form input:focus:invalid {
+  border: 1px solid rgb(192, 66, 66);
 }
 
 .register-form p {
