@@ -18,6 +18,9 @@ import Dashboard from "@pages/Admin/Dashboard";
 import VehiclesAdmin from "@pages/Admin/VehiclesAdmin";
 import VehicleForm from "@pages/Admin/VehicleForm";
 
+// Error
+import Error from "@pages/Error";
+
 export default function Router() {
   return (
     <BrowserRouter>
@@ -30,6 +33,7 @@ export default function Router() {
         <Route path="/admin" element={<Dashboard />} />
         <Route path="/admin/vehicles" element={<VehiclesAdmin />} />
         <Route path="/admin/vehicles/:id" element={<VehicleForm />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
