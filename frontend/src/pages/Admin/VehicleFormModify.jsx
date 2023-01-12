@@ -123,12 +123,12 @@ export default function VehicleFormModify() {
               <div className="adminContentVehicles">
                 <div className="titleField1">Avaibility</div>
                 <input
-                    className="form"
-                    type="boolean"
-                    name="is_available"
-                    placeholder="is_available"
-                    value={vehicle.is_available}
-                    onChange={handleChange}
+                  className="form"
+                  type="boolean"
+                  name="is_available"
+                  placeholder="is_available"
+                  value={vehicle.is_available}
+                  onChange={handleChange}
                 />
               </div>
               <Calendar />
