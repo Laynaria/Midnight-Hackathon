@@ -20,7 +20,7 @@ export default function VehicleFormModify() {
   }, []);
 
   const handleChange = (event) => {
-    event.target.value.includes("*") ? "" : setVehicle(event.target.value);
+    setVehicle({ ...vehicle, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
