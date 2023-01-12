@@ -142,7 +142,7 @@ export default function Register() {
           </label>
           <label htmlFor="postalCode">
             <input
-              type="text"
+              type="number"
               id="postal_code"
               name="postalCode"
               placeholder="Zipcode*"
