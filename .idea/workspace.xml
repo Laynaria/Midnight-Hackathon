@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d16742e-be77-493e-9e36-64f851e50991" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTablePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleFormModify.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/UserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/vehicleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/vehicleRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/UsersTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTablePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTablePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Router/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Router/Router.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/UsersAdmin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/UsersAdmin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KBVycv2zYqAtYVM9Ntb7LL6rMK" />
   <component name="ProjectViewState">
@@ -48,10 +55,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/pages/Admin" />
+      <recent name="$PROJECT_DIR$/frontend/src/components/Admin/Tables" />
       <recent name="$PROJECT_DIR$/backend/src/routes" />
       <recent name="$PROJECT_DIR$/backend/src/models" />
       <recent name="$PROJECT_DIR$/backend/src/controllers" />
-      <recent name="$PROJECT_DIR$/frontend/src/components/Admin/Tables" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/assets/img" />
@@ -71,7 +78,7 @@
       <workItem from="1673510223808" duration="282000" />
       <workItem from="1673522651907" duration="6397000" />
       <workItem from="1673534345882" duration="31000" />
-      <workItem from="1673534404666" duration="3813000" />
+      <workItem from="1673534404666" duration="9369000" />
     </task>
     <servers />
   </component>

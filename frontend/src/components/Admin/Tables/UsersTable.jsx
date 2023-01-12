@@ -8,17 +8,15 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../../../assets/css/admin/Admin.css";
 
-
-
 export default function MaintenanceTable() {
   const [rows, setRows] = React.useState([]);
 
   React.useEffect(() => {
     fetch("http://localhost:5501/user")
-        .then((response) => response.json())
-        .then((data) => {
-          setRows(data[0]);
-        });
+      .then((response) => response.json())
+      .then((data) => {
+        setRows(data[0]);
+      });
   }, []);
 
   return (
@@ -34,9 +32,7 @@ export default function MaintenanceTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows
-              .slice(0,5)
-              .map((row) => (
+          {rows.slice(0, 5).map((row) => (
             <TableRow
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

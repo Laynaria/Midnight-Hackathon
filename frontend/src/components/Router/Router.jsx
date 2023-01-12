@@ -18,6 +18,7 @@ import Dashboard from "@pages/Admin/Dashboard";
 import VehiclesAdmin from "@pages/Admin/VehiclesAdmin";
 import VehicleForm from "@pages/Admin/VehicleForm";
 import UserAdmin from "@pages/Admin/UsersAdmin";
+import VehicleFormModify from "@pages/Admin/VehicleFormModify";
 
 export default function Router() {
   return (
@@ -30,7 +31,8 @@ export default function Router() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Dashboard />} />
         <Route path="/admin/vehicles" element={<VehiclesAdmin />} />
-        <Route path="/admin/vehicles/:id" element={<VehicleForm />} />
+        <Route path="/admin/vehicles/add" element={<VehicleForm />} />
+        <Route path="/admin/vehicles/:id" element={<VehicleFormModify />} />
         <Route path="/admin/users" element={<UserAdmin />} />
       </Routes>
     </BrowserRouter>

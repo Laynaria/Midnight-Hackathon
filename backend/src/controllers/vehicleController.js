@@ -15,4 +15,16 @@ const getVehicles = (req, res) => {
     });
 };
 
-module.exports = { getVehicles };
+const getVehicleById = (req, res) => {
+  model
+    .find(req.params.id)
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
+module.exports = { getVehicles, getVehicleById };

@@ -22,6 +22,15 @@ class VehicleModel {
     );
   }
 
+  find(id) {
+    return connection.query(
+      `select *
+             from ${this.table}
+             where id = ?`,
+      [id]
+    );
+  }
+
   insert(car) {
     return connection.query(
       `insert into ${this.table} (brand, matriculation, is_available, type, model, ideal_object, ideal_distance,

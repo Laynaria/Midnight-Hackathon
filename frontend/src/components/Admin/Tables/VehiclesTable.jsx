@@ -39,9 +39,7 @@ export default function VehiclesTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows
-              .slice(0,5)
-              .map((row) => (
+          {rows.slice(0, 5).map((row) => (
             <TableRow
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
