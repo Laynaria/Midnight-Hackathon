@@ -33,6 +33,8 @@ app.get("/", (req, res) => {
   res.send("🐘");
 });
 
+app.use(authMiddleware);
+
 app.get("/admin", authMiddleware, (req, res) => {
   res.send("Hello admin!");
 });
