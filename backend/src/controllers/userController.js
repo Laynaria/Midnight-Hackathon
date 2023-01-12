@@ -1,7 +1,7 @@
-const model = require("../models/VehicleModel");
+const model = require("../models/UserModel");
 
-const getVehicles = (req, res) => {
-  const sql = "select * from car";
+const getUsers = (req, res) => {
+  const sql = "select * from user";
   const sqlValues = [];
 
   model
@@ -15,4 +15,4 @@ const getVehicles = (req, res) => {
     });
 };
 
-module.exports = { getVehicles };
+module.exports = { getUsers };

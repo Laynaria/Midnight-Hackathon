@@ -8,54 +8,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../../../assets/css/admin/Admin.css";
 
-/* function createData({ id, type, brand, model, immat, available }) {
-  return { id, type, brand, model, immat, available };
-}
-
- const rows = [
-    createData({
-      id: 1,
-      type: "Berline",
-      brand: "Peugeot",
-      model: "508",
-      immat: "AA123BB",
-      available: true,
-    }),
-    createData({
-      id: 2,
-      type: "Citadine",
-      brand: "Renault",
-      model: "Zoé",
-      immat: "CC123DD",
-      available: true,
-    }),
-    createData({
-      id: 3,
-      type: "Utilitaire",
-      brand: "Renault",
-      model: "Master",
-      immat: "EE123FF",
-      available: true,
-    }),
-    createData({
-      id: 4,
-      type: "SUV",
-      brand: "Peugeot",
-      model: "5008",
-      immat: "GG123HH",
-      available: false,
-    }),
-    createData({
-      id: 5,
-      type: "Citadine",
-      brand: "Fiat",
-      model: 500,
-      immat: "II123JJ",
-      available: false,
-    }),
-  ];
-*/
-
 const isAvailable = (available) => {
   if (available) {
     return "Yes";
@@ -66,14 +18,13 @@ const isAvailable = (available) => {
 export default function VehiclesTable() {
   const [rows, setRows] = React.useState([]);
 
-    React.useEffect(() => {
-      fetch ("http://localhost:5501/car")
-        .then((response) => response.json())
-        .then((data) => {
-            setRows(data);
-            console.log(data);
-        }
-        )}, []);
+  React.useEffect(() => {
+    fetch("http://localhost:5501/car")
+      .then((response) => response.json())
+      .then((data) => {
+        setRows(data);
+      });
+  }, []);
 
   return (
     <TableContainer component={Paper}>
