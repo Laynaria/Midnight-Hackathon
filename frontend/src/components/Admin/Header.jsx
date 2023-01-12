@@ -7,7 +7,7 @@ import notification from "../../assets/img/notification.svg";
 
 export default function Header() {
   return (
-    <header>
+    <div className="headerAdmin">
       <div className="header-search">
         <div className="searchIcon">
           <FontAwesomeIcon icon={faSearch} />
@@ -22,6 +22,6 @@ export default function Header() {
         />
         <img className="avatar" alt="User avatar" src={nopicture} />
       </div>
-    </header>
+    </div>
   );
 }
