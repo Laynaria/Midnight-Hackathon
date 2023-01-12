@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNavicon } from "@fortawesome/free-solid-svg-icons";
@@ -6,8 +6,8 @@ import logobg from "../../assets/images/logobg.jpg";
 import "./header.css";
 
 export default function Header() {
-  // To make current link green
-  const [clickedLinked, setClickedLink] = useState(0);
+  const sampleLocation = useLocation();
+  console.warn(sampleLocation);
 
   const [showNavTop, setShowNavTop] = useState(true);
 
@@ -36,6 +36,21 @@ export default function Header() {
     };
   }, []);
 
+  const navTopElem = [
+    {
+      name: "home",
+      url: "/",
+    },
+    {
+      name: "vehicle",
+      url: "/vehicles",
+    },
+    {
+      name: "contact",
+      url: "/contact",
+    },
+  ];
+
   return (
     <header className="flex justify-between">
       <div className="navLogo">
@@ -52,21 +67,18 @@ export default function Header() {
       {showNavTop ? (
         <>
           <ul id="navTop" className="navTop">
-            <Link to="/" onClick={() => setClickedLink(0)}>
-              <li className={clickedLinked === 0 ? "clickedLinked" : ""}>
-                Home
-              </li>
-            </Link>
-            <Link to="/vehicles" onClick={() => setClickedLink(1)}>
-              <li className={clickedLinked === 1 ? "clickedLinked" : ""}>
-                Vehicle
-              </li>
-            </Link>
-            <Link to="/contact" onClick={() => setClickedLink(2)}>
-              <li className={clickedLinked === 2 ? "clickedLinked" : ""}>
-                Contact
-              </li>
-            </Link>
+            {navTopElem.map((item) => (
+              <Link to={item.url}>
+                <li
+                  key={item.name}
+                  className={
+                    sampleLocation.pathname === item.url ? "clickedLinked" : ""
+                  }
+                >
+                  {item.name}
+                </li>
+              </Link>
+            ))}
           </ul>
           <Link className="navTopRight items-center pr-10 pl-10" to="/login">
             Account
