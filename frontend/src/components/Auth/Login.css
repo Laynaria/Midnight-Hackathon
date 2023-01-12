@@ -1,11 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
 
+@keyframes animRegister {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
 .login-main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 100vh;
   font-family: "Montserrat";
   color: rgba(70, 92, 97, 0.56);
+  background-color: #ffffff;
 }
 
 .login-main .back-arrow {
@@ -13,6 +24,7 @@
   width: 1rem;
   top: 1rem;
   left: 1rem;
+  animation: animRegister 1s ease;
 }
 
 .login-section {
@@ -23,6 +35,7 @@
   justify-content: center;
   gap: 2rem;
   padding: 10rem 0;
+  animation: animRegister 1s ease;
 }
 
 .login-section img {
@@ -52,6 +65,14 @@
   outline: none;
 }
 
+.login-form input:focus {
+  border: 1px solid #96cd32;
+}
+
+.login-form input:focus:invalid {
+  border: 1px solid rgb(192, 66, 66);
+}
+
 .login-form p {
   display: flex;
   align-items: center;
@@ -72,6 +93,24 @@
   margin: auto;
   font-size: 1.5rem;
   color: white;
+}
+
+.login-form .buttonClicked {
+  animation: animRegisterButton 0.5s ease;
+}
+
+@keyframes animRegisterButton {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 .login-main p:nth-of-type(2) {
@@ -106,11 +145,11 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .login-main {
     display: block;
-    width: 80%;
-    margin: 2rem auto;
+    width: 100%;
+    padding: 0;
   }
 
   .bg-img-login {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import logo from "@assets/images/logov2.svg";
 import hide from "@assets/images/hide.svg";
@@ -10,6 +10,7 @@ import "@components/Auth/Login.css";
 
 export default function Logo() {
   const [isShown, setIsShown] = useState(false);
+  const [isSubmitClicked, setIsSubmitClicked] = useState(false);
 
   const [loginObject, setLoginObject] = useState({
     email: "",
@@ -24,10 +25,16 @@ export default function Logo() {
 
   // function to send the form value to backend
   const handleSubmit = (e) => {
+    setIsSubmitClicked(false);
     e.preventDefault();
     console.warn(loginObject);
     // add what is needed to send the state loginObject as a mail.
   };
+
+  useEffect(() => {
+    setTimeout(setIsSubmitClicked(true), "500");
+  }, [handleSubmit]);
+
   return (
     <main className="login-main">
       <Link to="/" className="back-arrow">
@@ -69,7 +76,12 @@ export default function Logo() {
             />
             {isShown ? "Hide Password" : "See Password"}
           </p>
-          <button type="submit">Connexion</button>
+          <button
+            type="submit"
+            className={isSubmitClicked ? "buttonClicked" : ""}
+          >
+            Connexion
+          </button>
         </form>
         <p>Forgotten Password</p>
         <p />
