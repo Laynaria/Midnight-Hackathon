@@ -225,6 +225,7 @@ main {
 
 .adminContent {
   padding: 1rem;
+  background-color: #dcdee2;
 }
 
 .kpiContent {
@@ -293,7 +294,6 @@ main {
 .content {
   display: flex;
   justify-content: space-between;
-  background-color: #dcdee2;
 }
 
 .tableItem {
@@ -597,20 +597,19 @@ main {
   margin-top: 5rem;
 }
 
-
 .button-logout {
   display: flex;
-    align-items: center;
+  align-items: center;
   justify-content: center;
-    bottom: 0;
-    left: 0;
-    width: 8rem;
-    height: 2rem;
-    background-color: #0b4c65;
-    color: #fff;
-    font-size: 1rem;
+  bottom: 0;
+  left: 0;
+  width: 8rem;
+  height: 2rem;
+  background-color: #0b4c65;
+  color: #fff;
+  font-size: 1rem;
   text-align: center;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
 }

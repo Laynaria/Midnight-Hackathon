@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d16742e-be77-493e-9e36-64f851e50991" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/controllers/vehicleController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/VehicleModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/routes/vehicleRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/services/UserService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/services/VehicleService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/admin/Admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/admin/Admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/LeftBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/LeftBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Admin/Tables/VehiclesTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -33,7 +46,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mathieulanglois/GITS/Hackaton-Midnight/frontend/src/components/Admin/Tables&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mathieulanglois/GITS/Midnight-Hackathon/backend/src/routes&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -43,6 +56,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/routes" />
       <recent name="$PROJECT_DIR$/frontend/src/components/Admin/Tables" />
       <recent name="$PROJECT_DIR$/frontend/src/pages/Admin" />
     </key>
@@ -62,6 +76,9 @@
       <workItem from="1673450142515" duration="15197000" />
       <workItem from="1673470211425" duration="7289000" />
       <workItem from="1673510223808" duration="282000" />
+      <workItem from="1673522651907" duration="6397000" />
+      <workItem from="1673534345882" duration="31000" />
+      <workItem from="1673534404666" duration="33000" />
     </task>
     <servers />
   </component>
