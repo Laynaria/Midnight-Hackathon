@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import AuthService from "@services/AuthService";
@@ -14,6 +14,8 @@ import "@components/Auth/Login.css";
 export default function Logo() {
   const [isShown, setIsShown] = useState(false);
   const [isSubmitClicked, setIsSubmitClicked] = useState(false);
+
+  const navigate = useNavigate();
 
   const [loginObject, setLoginObject] = useState({
     mail: "",
@@ -38,6 +40,7 @@ export default function Logo() {
 
     AuthService.login(loginObject).then(() => {
       Notify.success("Loginned successfully");
+      navigate("/profile");
     });
 
     // add what is needed to send the state loginObject as a mail.
