@@ -1,27 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
 
-.contact-form {
+.profile-form {
   margin-top: 5rem;
   font-family: "Montserrat";
 }
 
-.contact-form h1 {
+.profile-form h1 {
   padding-top: 5rem;
   padding-bottom: 25rem;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../../assets/bg-img/contact_background.svg);
-  background-position: top center;
+    url(../../assets/bg-img/profile_background.svg);
+  background-position: center;
   font-size: 3rem;
   text-transform: uppercase;
   color: white;
   margin-bottom: 5rem;
 }
 
-.contact-form h1 span {
+.profile-form h1 span {
   color: #96cd32;
 }
 
-.contact-form form {
+.profile-form form {
   margin-top: -20rem;
   margin-bottom: 7rem;
   width: 50rem;
@@ -34,15 +34,14 @@
   border-radius: 18px;
 }
 
-.contact-form label:nth-of-type(3),
-.contact-form label:nth-of-type(6),
-.contact-form label:nth-of-type(7),
-.contact-form button {
+.profile-form label:nth-of-type(3),
+.profile-form p,
+.profile-form button {
   grid-column: 1 / -1;
 }
 
-.contact-form input,
-.contact-form textarea {
+.profile-form input,
+.profile-form textarea {
   width: 100%;
   resize: none;
   background: #ffffff;
@@ -52,23 +51,31 @@
   outline: none;
 }
 
-.contact-form input:focus {
+.profile-form input:focus {
   border: 1px solid #96cd32;
 }
 
-.contact-form input:focus:invalid {
+.profile-form input:focus:invalid {
   border: 1px solid rgb(192, 66, 66);
 }
 
-.contact-form input:nth-of-type(7) {
+.profile-form p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.profile-form input:nth-of-type(7) {
   height: 25rem;
 }
 
-.contact-form textarea:focus {
+.profile-form textarea:focus {
   border: 1px solid #96cd32;
 }
 
-.contact-form button[type="submit"] {
+.profile-form button[type="submit"] {
   background-color: #96cd32;
   border-radius: 5px;
   padding: 0.5rem 2rem;
@@ -77,8 +84,30 @@
   color: white;
 }
 
+.profile-form .buttonClicked {
+  animation: animRegisterButton 0.5s ease;
+}
+
+@keyframes animRegisterButton {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.profile-form form:nth-of-type(2) {
+  margin-top: -2rem;
+}
+
 @media screen and (max-width: 850px) {
-  .contact-form form {
+  .profile-form form {
     display: flex;
     flex-direction: column;
     width: 80%;

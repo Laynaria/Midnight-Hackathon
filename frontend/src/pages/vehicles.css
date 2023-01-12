@@ -1,0 +1,96 @@
+body {
+  background-color: #fff;
+}
+
+/*
+* LAST RENT
+*/
+
+.lastRent {
+  width: 80vw;
+  margin: auto;
+}
+
+.lastRent h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 3rem 0;
+}
+
+.card-rent {
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.52);
+  margin-bottom: 2rem;
+}
+
+.card-rent-head {
+  /* background-image: url('../assets/images/car2.jpg'); */
+  height: 180px;
+  width: 100%;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.card-rent-body {
+  padding: 2rem 0;
+}
+
+.card-rent-body .title1 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.card-rent-body .title2 {
+  font-size: 0.7em;
+  color: #838383;
+}
+
+.card-rent-body .button {
+  background-color: #8bc95b;
+  width: fit-content;
+  padding: 0.5em 1rem;
+  font-weight: bold;
+  font-size: 0.7em;
+  margin: auto;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+}
+
+.card-rent-foot {
+  border-top: 1px #d2d2d2 solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-rent-foot div {
+  padding: 0.6rem;
+  font-size: 0.7em;
+  color: #727272;
+  text-align: center;
+  border-right: 1px #d2d2d2 solid;
+}
+
+.card-rent-foot div:nth-last-of-type() {
+  border-right: none;
+}
+
+@media screen AND (min-width: 850px) {
+  .lastRent {
+    padding: 6rem;
+  }
+
+  .lastRentContent {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .card-rent-head {
+    width: 20vw;
+  }
+
+  .card-rent:hover {
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.52);
+    cursor: pointer;
+  }
+}

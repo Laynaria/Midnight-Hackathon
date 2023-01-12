@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLifeRing,
@@ -8,50 +9,20 @@ import {
   faFlag,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import vehiclesRent from "@assets/data/vehiclesRent.json";
 import NavbarLayout from "@components/layout/NavbarLayout";
 import Hero from "@components/layout/Hero/Hero";
 import CardCarRent from "@components/CardCarRent";
+import hero1 from "@assets/images/hero1.jpg";
 import car1 from "../assets/images/car1.jpg";
-import car2 from "../assets/images/car2.jpg";
-import car3 from "../assets/images/car3.jpg";
-import car4 from "../assets/images/car4.jpg";
 
 import "./home.css";
 
 export default function Home() {
-  const vehiclesRent = [
-    {
-      id: 1,
-      name: "Seltos 5p 2023",
-      priceStart: "39$",
-      year: "2023",
-      passenger: "5",
-      km: "150 000",
-      img: car2,
-    },
-    {
-      id: 2,
-      name: "Seltos 5p 2023",
-      priceStart: "39$",
-      year: "2023",
-      passenger: "5",
-      km: "150 000",
-      img: car3,
-    },
-    {
-      id: 3,
-      name: "Seltos 5p 2023",
-      priceStart: "39$",
-      year: "2023",
-      passenger: "5",
-      km: "150 000",
-      img: car4,
-    },
-  ];
   return (
     <NavbarLayout>
       {/* <h1 style={{ marginTop: "5rem" }}>This is Home</h1> */}
-      <Hero />
+      <Hero bg={hero1} />
 
       <section className="services">
         <div className="services-card">
@@ -96,8 +67,10 @@ export default function Home() {
         <h2>Latest Rental Vehicles</h2>
 
         <div className="lastRentContent">
-          {vehiclesRent.map((elem) => (
-            <CardCarRent elem={elem} />
+          {vehiclesRent.slice(vehiclesRent.length - 3).map((elem) => (
+            <Link to={`/vehicles/${elem.id}`}>
+              <CardCarRent elem={elem} />
+            </Link>
           ))}
         </div>
       </section>

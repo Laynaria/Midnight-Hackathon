@@ -2,7 +2,6 @@
 
 .hero {
   height: 100vh;
-  background-image: url("../../../assets/images/hero1.jpg");
   background-size: cover;
   gap: 2rem;
   padding-top: 80px;
@@ -74,6 +73,7 @@
 
 .hero input {
   padding: 0.4rem;
+  color: #000;
 }
 
 .hero .card-footer {
@@ -90,6 +90,29 @@
 
 .btn-green {
   background-color: #8bc95b;
+  transition: all ease 0.5s;
+}
+
+.btn-green:hover {
+  background-color: #456829;
+  cursor: pointer;
+}
+
+.addressList {
+  background-color: #000000b3;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.addressList li {
+  padding: 0.3rem;
+  margin-bottom: 1px;
+  background-color: #ffffff17;
+  cursor: pointer;
+}
+
+.addressList li:hover {
+  background-color: #ffffff3a;
 }
 
 @media screen AND (min-width: 850px) {
@@ -97,7 +120,7 @@
     font-size: clamp(1em, 3vw, 2em);
   }
 
-  .hero .form {
+  .hero .formSearch {
     display: flex;
     gap: 1rem;
   }
