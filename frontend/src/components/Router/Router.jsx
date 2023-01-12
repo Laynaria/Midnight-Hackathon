@@ -17,9 +17,9 @@ import Login from "@pages/Auth/Login";
 
 // Admin
 import Dashboard from "@pages/Admin/Dashboard";
-import SearchVehiclesRentContext from "../../contexts/searchVehiclesRentContext";
 import VehiclesAdmin from "@pages/Admin/VehiclesAdmin";
 import VehicleForm from "@pages/Admin/VehicleForm";
+import SearchVehiclesRentContext from "../../contexts/searchVehiclesRentContext";
 
 export default function Router() {
   const [searchVehiclesRentDetails, setSearchVehiclesRentDetails] = useState([
