@@ -37,7 +37,7 @@ export default function Dashboard() {
               <div className="tableContent">
                 <VehiclesTable />
                 <div className="linkContentTable">
-                  <a className="linkTable" href="/admin/VehiclesAdmin.jsx">
+                  <a className="linkTable" href="/admin/Vehicles">
                     Read more
                   </a>
                 </div>

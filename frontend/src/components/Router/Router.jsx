@@ -17,8 +17,9 @@ import Login from "@pages/Auth/Login";
 
 // Admin
 import Dashboard from "@pages/Admin/Dashboard";
-
 import SearchVehiclesRentContext from "../../contexts/searchVehiclesRentContext";
+import VehiclesAdmin from "@pages/Admin/VehiclesAdmin";
+import VehicleForm from "@pages/Admin/VehicleForm";
 
 export default function Router() {
   const [searchVehiclesRentDetails, setSearchVehiclesRentDetails] = useState([
@@ -67,6 +68,8 @@ export default function Router() {
         <Route path="/vehicles/:id" element={<Vehiclesid />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Dashboard />} />
+        <Route path="/admin/vehicles" element={<VehiclesAdmin />} />
+        <Route path="/admin/vehicles/:id" element={<VehicleForm />} />
       </Routes>
     </BrowserRouter>
   );

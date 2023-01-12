@@ -1,0 +1,90 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 80px;
+  background-color: #092936;
+}
+
+.triangle {
+  color: #8bc95b;
+  background-color: #8bc95b;
+  -webkit-clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
+  clip-path: polygon(61% 0, 100% 0, 100% 100%, 20% 100%);
+  width: 40%;
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+
+.footext {
+  color: white;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.voiture {
+  max-width: 160px;
+  max-height: 80px;
+  margin-left: 5rem;
+}
+
+.reseau {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+  margin-right: 3rem;
+}
+
+.footmob {
+  display: flex;
+  align-items: center;
+}
+
+.reso {
+  height: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+  }
+
+  .triangle {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    height: 50px;
+    width: 100%;
+  }
+
+  .footmob {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .reseau {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .reseau img {
+    height: 40px;
+  }
+
+  .voiture {
+    height: 60px;
+    width: 7rem;
+    margin: 0;
+  }
+}

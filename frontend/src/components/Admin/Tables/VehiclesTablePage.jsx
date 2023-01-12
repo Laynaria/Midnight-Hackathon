@@ -8,6 +8,7 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../../../assets/css/admin/Admin.css";
+import { Link } from "react-router-dom";
 import editButton from "../../../assets/img/editButton.svg";
 
 function createData({ id, type, brand, model, immat, available }) {
@@ -76,6 +77,7 @@ export default function VehiclesTablePage() {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
   return (
     <>
       <TableContainer component={Paper}>
@@ -114,11 +116,13 @@ export default function VehiclesTablePage() {
                   <TableCell align="left">{row.object}</TableCell>
                   <TableCell align="left">{row.capacity}</TableCell>
                   <TableCell align="left">
-                    <img
-                      className="editButton"
-                      src={editButton}
-                      alt={row.model}
-                    />
+                    <Link to="/admin/vehicles/:id">
+                      <img
+                        className="editButton"
+                        src={editButton}
+                        alt="Edit button"
+                      />
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))}
