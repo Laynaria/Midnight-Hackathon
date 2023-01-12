@@ -4,7 +4,7 @@ import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
-import TablePagination from '@mui/material/TablePagination';
+import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../../../assets/css/admin/Admin.css";
@@ -82,7 +82,7 @@ export default function VehiclesTablePage() {
         <Table sx={{ minWidth: 1100 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-                <TableCell>id</TableCell>
+              <TableCell>id</TableCell>
               <TableCell>Type</TableCell>
               <TableCell align="left">Brand</TableCell>
               <TableCell align="left">Model</TableCell>
@@ -102,7 +102,7 @@ export default function VehiclesTablePage() {
                   key={row.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                    <TableCell>{row.id}</TableCell>
+                  <TableCell>{row.id}</TableCell>
                   <TableCell>{row.type}</TableCell>
                   <TableCell align="left">{row.brand}</TableCell>
                   <TableCell align="left">{row.model}</TableCell>
@@ -113,7 +113,13 @@ export default function VehiclesTablePage() {
                   <TableCell align="left">{row.autonomy}</TableCell>
                   <TableCell align="left">{row.object}</TableCell>
                   <TableCell align="left">{row.capacity}</TableCell>
-                  <TableCell align="left"><img className="editButton" src={editButton} /></TableCell>
+                  <TableCell align="left">
+                    <img
+                      className="editButton"
+                      src={editButton}
+                      alt={row.model}
+                    />
+                  </TableCell>
                 </TableRow>
               ))}
           </TableBody>
