@@ -42,6 +42,22 @@ export default function Register() {
       Notify.error("Passwords do not match");
       return;
     }
+
+    if (
+      registerObject.firstname === "" ||
+      registerObject.lastname === "" ||
+      registerObject.mail === "" ||
+      registerObject.password === "" ||
+      registerObject.cellphone === "" ||
+      registerObject.address === "" ||
+      registerObject.postalCode === "" ||
+      registerObject.city === "" ||
+      registerObject.confirm_password === ""
+    ) {
+      Notify.error("Please fill all the required fields");
+      return;
+    }
+
     AuthService.register(registerObject).then(() => {
       Notify.success("Account created successfully");
     });
