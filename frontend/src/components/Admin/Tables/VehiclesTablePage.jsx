@@ -117,7 +117,11 @@ export default function VehiclesTablePage() {
                   <TableCell align="left">{row.capacity}</TableCell>
                   <TableCell align="left">
                     <Link to="/admin/vehicles/:id">
-                      <img className="editButton" src={editButton} />
+                      <img
+                        className="editButton"
+                        src={editButton}
+                        alt="Edit button"
+                      />
                     </Link>
                   </TableCell>
                 </TableRow>

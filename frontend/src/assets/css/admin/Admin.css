@@ -554,20 +554,20 @@ main {
 }
 
 .form {
-    width: 30rem;
-    height: 2.5rem;
-    border: 1px #324e7371 solid;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+  width: 30rem;
+  height: 2.5rem;
+  border: 1px #324e7371 solid;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 1rem;
   margin-left: 1.5rem;
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
 
 .headerForm {
   display: flex;
   align-items: flex-start;
-    justify-content: space-between;
+  justify-content: space-between;
   border-bottom: 1px #cfcfcf solid;
 }
 
@@ -584,6 +584,6 @@ main {
   width: 5rem;
   font-size: 1rem;
   text-align: center;
-  color : #fff;
+  color: #fff;
   border-radius: 0.3rem;
 }
