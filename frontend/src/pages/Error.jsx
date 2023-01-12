@@ -19,8 +19,8 @@ export default function Error() {
       />
       <h1>404</h1>
       <h2>
-        It seems that you had a road accident ... but don't panic our
-        technicians are on the case !
+        It seems that you have had a road accident ... but don't panic, our
+        technicians are on the case
       </h2>
       <button
         onClick={() => navigate("/")}
