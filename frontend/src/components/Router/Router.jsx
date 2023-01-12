@@ -28,6 +28,7 @@ import Error from "@pages/Error";
 
 // Context for Vehicles Rent
 import SearchVehiclesRentContext from "../../contexts/searchVehiclesRentContext";
+import UserFormModify from "@pages/Admin/UserFormModify";
 
 export default function Router() {
   const [searchVehiclesRentDetails, setSearchVehiclesRentDetails] = useState([
@@ -83,6 +84,7 @@ export default function Router() {
         <Route path="/admin/vehicles/add" element={<VehicleForm />} />
         <Route path="/admin/vehicles/:id" element={<VehicleFormModify />} />
         <Route path="/admin/users" element={<UserAdmin />} />
+          <Route path="/admin/users/:id" element={<UserFormModify />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

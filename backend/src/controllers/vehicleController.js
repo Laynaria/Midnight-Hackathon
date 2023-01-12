@@ -28,11 +28,20 @@ const getVehicleById = (req, res) => {
 };
 
 const updateVehicle = (req, res) => {
-  const car = { ...req.body };
-    model
-        .update(car)
-        .then((result) => { res.send(result); })
-        .catch((err) => {   console.error(err); res.sendStatus(500); });
+  const { id } = req.params;
+  const car = {
+    ...req.body,
+    id,
+  };
+  model
+    .update(car)
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 };
 
 module.exports = { getVehicles, getVehicleById, updateVehicle };
