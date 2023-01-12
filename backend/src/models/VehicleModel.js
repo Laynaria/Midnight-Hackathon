@@ -31,6 +31,23 @@ class VehicleModel {
     );
   }
 
+    update(car) {
+        return connection.query(
+            `update into ${this.table} set (brand, matriculation, is_available, type, model, ideal_object, ideal_distance,
+                                      ideal_places) value (?,?,?,?,?,?,?,?) where id = ?`,
+            [
+                car.brand,
+                car.matriculation,
+                car.is_available,
+                car.type,
+                car.model,
+                car.ideal_object,
+                car.ideal_distance,
+                car.ideal_places,
+            ]
+        );
+    }
+
   insert(car) {
     return connection.query(
       `insert into ${this.table} (brand, matriculation, is_available, type, model, ideal_object, ideal_distance,
