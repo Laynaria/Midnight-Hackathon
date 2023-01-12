@@ -587,3 +587,30 @@ main {
   color: #fff;
   border-radius: 0.3rem;
 }
+
+/* Left bar */
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+
+.button-logout {
+  display: flex;
+    align-items: center;
+  justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 8rem;
+    height: 2rem;
+    background-color: #0b4c65;
+    color: #fff;
+    font-size: 1rem;
+  text-align: center;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+}
