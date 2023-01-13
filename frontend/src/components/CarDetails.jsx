@@ -37,7 +37,7 @@ export default function CarDetails({
                 className="text-green-600 text-sm mr-2"
                 icon={faCheckCircle}
               />{" "}
-              Fuel Diesel / 1600 cm3 Engine
+              Fuel electric
             </li>
             <li>
               <FontAwesomeIcon
@@ -66,13 +66,6 @@ export default function CarDetails({
                 icon={faCheckCircle}
               />{" "}
               Manufacturing Year 2014
-            </li>
-            <li>
-              <FontAwesomeIcon
-                className="text-green-600 text-sm mr-2"
-                icon={faCheckCircle}
-              />{" "}
-              5 Doors and Panorama View
             </li>
           </ul>
           <div className="vehicleDetailFoot">
