@@ -1,35 +1,33 @@
+## Context
+
+This repository is the repo of the Wild Code School "Remote" Midnight team from 2022/2023 during the Hackathon from January 11 to 13, 2023 in partnership with AWS (Amazon Web Services).
+
 ## Concept
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+Our concept, defined and developed in less than 48 hours, is to be the first electric vehicle rental platform based on an environmentally friendly approach. Indeed, according to criteria such as the distance to be covered, the number of people on board and the reason of the journey (work, leisure, etc.), we propose electric vehicles really adapted to the need.
+
+Complemented by the presence of sensors in the vehicles to encourage eco-responsible driving, we assign an "ecological" rating in the form of a sheet to encourage eco-responsible rentals.
 
 ## Setup & Use
 
-### Project Initialization
+- `npm run setup`to install all dependencies (back and front)
+- `npm run dev` to start the server
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- Run command `npm run setup`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+## Technologies
 
-### Available Commands
+We produced our application with :
+- React
+- NodeJS
+- Express
+- MySQL
+- TailwindCSS
+- CSS / JavaScript / JSX
 
-- `setup` : Initialization of frontend and backend, as well as all toolings
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+## Team
 
-## FAQ
-
-### Tools
-
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+The Midnight team is composed of :
+- Elie Parthenay
+- Christopher Raspail
+- Valentin Dupin
+- Julien Grellier
+- Mathieu Langlois
