@@ -1,11 +1,11 @@
 import LeftBar from "@components/Admin/LeftBar";
 import Header from "@components/Admin/Header";
-import Calendar from "react-calendar";
 import * as React from "react";
-import "react-calendar/dist/Calendar.css";
 import "../../assets/css/admin/Admin.css";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import feuilleGreen from "../../assets/img/feuille-green.svg";
+import feuilleGrey from "../../assets/img/feuille-grey.svg";
 
 const ApiBaseUrL = import.meta.env.VITE_BACKEND_URL;
 
@@ -129,7 +129,8 @@ export default function UserFormModify() {
                 value={user.mail}
                 onChange={handleChange}
             />
-            <div className="tableTitleVehicles">Avaibility</div>
+            <div className="tableTitleVehicles">Ecological behaviour</div>
+            <div className="ecoCoeff"><img src={feuilleGreen}/><img src={feuilleGreen}/><img src={feuilleGreen}/><img src={feuilleGrey}/><img src={feuilleGrey}/></div>
             <div className="tableTitleVehicles">Picture</div>
           </div>
         </div>
