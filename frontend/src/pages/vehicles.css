@@ -105,14 +105,82 @@ body {
 
 .vehicleDetailFoot {
   padding: 1rem;
-  background-color: #092936;
+  color: #000;
+  text-align: center;
+}
+
+.vehicleDetailFoot2 {
+  padding: 1rem;
+  background-color: #8bc95a;
   color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.vehicleDetailFoot2:hover {
+  background-color: #3f5d28;
 }
 
 .vehiclePageTitle {
   margin-top: 10rem;
   font-size: 3em;
   font-family: "Monserrat";
+}
+
+.modal {
+  background-color: #000000a8;
+}
+
+.vehicleBooking {
+  width: 55vw;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.vehicleBooking .headTitle {
+  padding: 1rem;
+  border: 1px rgb(134, 134, 134) solid;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.vehicleBooking .forminput {
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.vehicleBooking input[type="text"],
+input[type="datetime-local"] {
+  padding: 0.6rem;
+  color: #000;
+  background-color: #f5f6f8;
+  border-color: #f5f6f8;
+  width: 100%;
+}
+
+.payementoption {
+  border-bottom: 1px #000 solid;
+  padding: 1rem;
+}
+
+.usagecard {
+  background-color: rgb(238, 238, 238);
+  padding: 0.5rem;
+}
+
+.usagecard div:nth-of-type(1) {
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+}
+
+.alertCard {
+  width: 55vw;
+  margin: auto;
+  background-color: #ff00003b;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 @media screen AND (min-width: 850px) {

@@ -14,6 +14,7 @@ import NavbarLayout from "@components/layout/NavbarLayout";
 import Hero from "@components/layout/Hero/Hero";
 import CardCarRent from "@components/CardCarRent";
 import hero1 from "@assets/images/hero1.jpg";
+import greenLogo from "@assets/images/greenLogo.png";
 import car1 from "../assets/images/car1.jpg";
 
 import "./home.css";
@@ -74,11 +75,14 @@ export default function Home() {
       </section>
 
       <section className="lastRent">
-        <h2>Latest Rental Vehicles</h2>
+        <h2>
+          <img className="inline w-10 mr-3" src={greenLogo} alt="greenLogo" />
+          Latest Rental Vehicles
+        </h2>
 
         <div className="lastRentContent">
           {rows.slice(rows.length - 3).map((elem) => (
-            <Link to={`/vehicles/${elem.id}`}>
+            <Link to="/vehicles">
               <CardCarRent elem={elem} />
             </Link>
           ))}
