@@ -6,6 +6,7 @@ import {
   faFolderTree,
   faGear,
   faNewspaper,
+    faCar,
 } from "@fortawesome/free-solid-svg-icons";
 import LeftListElement from "@components/Admin/LeftListElement";
 import { Link } from "react-router-dom";
@@ -19,7 +20,7 @@ const navList = [
   },
   {
     name: "Vehicles",
-    icon: faUsers,
+    icon: faCar,
     href: "vehicles",
   },
   {
@@ -34,7 +35,7 @@ const navList = [
   },
   {
     name: "Users",
-    icon: faGear,
+    icon: faUsers,
     href: "users",
   },
   {

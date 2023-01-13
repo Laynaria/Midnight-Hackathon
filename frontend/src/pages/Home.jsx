@@ -22,7 +22,7 @@ import "./home.css";
 export default function Home() {
   const [rows, setRows] = React.useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/car")
+    fetch("http://localhost:5501/car")
       .then((response) => response.json())
       .then((data) => {
         const newArr = data[0].filter((e) => +e.is_available === 1);
