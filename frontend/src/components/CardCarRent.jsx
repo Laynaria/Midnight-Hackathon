@@ -12,7 +12,7 @@ export default function CardCarRent({ hundleClick, elem }) {
       .then((data) => {
         setVehicleImg(data[0][0].name);
       });
-  }, []);
+  }, [elem]);
 
   return (
     <div

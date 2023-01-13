@@ -87,7 +87,7 @@ export default function CarDetails({
         </div>
       </section>
       {searchVehiclesRentDetails[0].passenger > 0 &&
-      +elem.ideal_places - +searchVehiclesRentDetails[0].passenger >= 1 ? (
+      +elem.ideal_places - +searchVehiclesRentDetails[0].passenger >= 2 ? (
         <div className="alertCard">
           <span className="font-bold">Warning:</span> This car does not fit your
           needs. To improve your ecological score, log in to your blablacar
