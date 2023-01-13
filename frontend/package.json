@@ -25,6 +25,7 @@
     "react-calendar": "^4.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.2",
+    "react-router-hash-link": "^2.4.3",
     "react-toastify": "^9.1.1",
     "template-fullstack": "file:.."
   },

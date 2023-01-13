@@ -178,6 +178,7 @@ export default function Hero({ bg }) {
         <div className="card-footer">
           <Link to="/vehicles">
             <div
+              id="findCar"
               role="button"
               tabIndex={0}
               onClick={submitSearchRent}
