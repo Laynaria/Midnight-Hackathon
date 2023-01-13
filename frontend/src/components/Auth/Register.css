@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&subset=latin,latin-ext");
+
+@keyframes animRegister {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.register-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+  font-family: "Montserrat";
+  color: rgba(70, 92, 97, 0.56);
+  background-color: #ffffff;
+}
+
+.register-main .back-arrow {
+  position: fixed;
+  width: 1rem;
+  top: 1rem;
+  left: 1rem;
+  animation: animRegister 1s ease;
+}
+
+.register-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  animation: animRegister 1s ease;
+}
+
+.register-section img {
+  /* width: 50%; */
+  height: 100px;
+}
+
+.register-section h1 {
+  font-weight: 700;
+  color: #092936;
+}
+
+.register-form {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.register-form label:nth-of-type(3),
+.register-form p,
+.register-form button {
+  grid-column: 1 / -1;
+}
+
+.register-form input {
+  width: 100%;
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #324e73;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.register-form input:focus {
+  border: 1px solid #96cd32;
+}
+
+.register-form input:focus:invalid {
+  border: 1px solid rgb(192, 66, 66);
+}
+
+.register-form p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.register-form p img {
+  height: 18px;
+  width: 22px;
+}
+
+.register-form button[type="submit"] {
+  background-color: #96cd32;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  margin: auto;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.register-form .buttonClicked {
+  animation: animRegisterButton 0.5s ease;
+}
+
+@keyframes animRegisterButton {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.bg-img-register {
+  background-image: url(../../assets/bg-img/login_background.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1110px) {
+  .register-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 90%;
+  }
+
+  .register-section {
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .register-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .register-main {
+    display: block;
+    width: 100%;
+  }
+
+  .register-section {
+    margin: 0;
+    padding: 2rem 0;
+  }
+
+  .bg-img-register {
+    display: none;
+  }
+}
