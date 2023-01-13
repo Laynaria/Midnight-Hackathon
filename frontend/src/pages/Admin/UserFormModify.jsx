@@ -1,6 +1,5 @@
 import LeftBar from "@components/Admin/LeftBar";
 import Header from "@components/Admin/Header";
-import Calendar from "react-calendar";
 import * as React from "react";
 import "react-calendar/dist/Calendar.css";
 import "../../assets/css/admin/Admin.css";
@@ -26,7 +25,6 @@ export default function UserFormModify() {
   };
 
   const handleSubmit = (event) => {
-    console.log(user);
     event.preventDefault();
     // const data = event.target.value;
     fetch(`${ApiBaseUrL}/car/${id}`, {
@@ -121,13 +119,13 @@ export default function UserFormModify() {
             />
             <div className="titleField">Mail</div>
             <input
-                className="form"
-                form
-                type="text"
-                name="mail"
-                placeholder="Email"
-                value={user.mail}
-                onChange={handleChange}
+              className="form"
+              form
+              type="text"
+              name="mail"
+              placeholder="Email"
+              value={user.mail}
+              onChange={handleChange}
             />
             <div className="tableTitleVehicles">Avaibility</div>
             <div className="tableTitleVehicles">Picture</div>

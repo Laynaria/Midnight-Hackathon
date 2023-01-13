@@ -23,33 +23,33 @@ class UserModel {
     );
   }
 
-    find(id) {
-        return connection.query(
-            `select *
+  find(id) {
+    return connection.query(
+      `select *
              from ${this.table}
              where id = ?`,
-            [id]
-        );
-    }
+      [id]
+    );
+  }
 
-    update(user) {
-        return connection.query(
-            `update ${this.table} set firstname = ?, lastname = ?, mail = ?, phone = ?, cellphone = ?, address = ?, additionalAddress = ?,
+  update(user) {
+    return connection.query(
+      `update ${this.table} set firstname = ?, lastname = ?, mail = ?, phone = ?, cellphone = ?, address = ?, additionalAddress = ?,
                 postalCode = ?, city = ? where id = ?`,
-            [
-                user.firstname,
-                user.lastname,
-                user.mail,
-                user.phone,
-                user.cellphone,
-                user.address,
-                user.additionalAddress,
-                user.postalCode,
-                user.city,
-                user.id,
-            ]
-        );
-    }
+      [
+        user.firstname,
+        user.lastname,
+        user.mail,
+        user.phone,
+        user.cellphone,
+        user.address,
+        user.additionalAddress,
+        user.postalCode,
+        user.city,
+        user.id,
+      ]
+    );
+  }
 }
 
 module.exports = new UserModel();

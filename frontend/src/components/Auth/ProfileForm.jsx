@@ -5,6 +5,7 @@ import Notify from "@utils/Notification";
 
 import hide from "@assets/images/hide.svg";
 import show from "@assets/images/show.svg";
+import leaf from "@assets/img/leaf.svg";
 
 export default function ContactForm() {
   const [isShown, setIsShown] = useState(false);
@@ -89,6 +90,32 @@ export default function ContactForm() {
   }, [handlePasswordSubmit]);
   return (
     <>
+      <div id="ecoresponsability-note" className="mx-auto">
+        <h2>
+          Your <span>Green</span> Score
+        </h2>
+        <img src={leaf} alt="leaf score" />
+        <img src={leaf} alt="leaf score" />
+        <img src={leaf} alt="leaf score" />
+        <img src={leaf} alt="leaf score" />
+        <img src={leaf} alt="leaf score" />
+      </div>
+      <div id="your-recent-travels" className="mx-auto">
+        <h2>
+          Your <span>Recent</span> Travels:
+        </h2>
+        <div className="travel">
+          <p>Car used : renault zoe</p>
+          <p>Travel distance: 43km</p>
+          <p>number of people : 2</p>
+        </div>
+
+        <div className="travel">
+          <p>Car used : mercedes EQE</p>
+          <p>Travel distance: 400km</p>
+          <p>number of people : 1</p>
+        </div>
+      </div>
       <form
         className="mx-auto"
         method="update"
