@@ -2,15 +2,15 @@ import LeftBar from "@components/Admin/LeftBar";
 import Header from "@components/Admin/Header";
 import * as React from "react";
 import "../../assets/css/admin/Admin.css";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import VehiclesTablePage from "@components/Admin/Tables/VehiclesTablePage";
 
 export default function VehiclesAdmin() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const navigateToVehiclesForm = () => {
-        navigate ("/admin/vehicles/add");
-    }
+  const navigateToVehiclesForm = () => {
+    navigate("/admin/vehicles/add");
+  };
 
   return (
     <div className="admin">
@@ -19,14 +19,16 @@ export default function VehiclesAdmin() {
         <Header />
         <div className="content">
           <div className="tableItem">
-            <div className="tableTitleVehicles1">Vehicles
+            <div className="tableTitleVehicles1">
+              Vehicles
               <button
-                  type="submit"
-                  className="addButton"
-                  onClick={navigateToVehiclesForm}
+                type="submit"
+                className="addButton"
+                onClick={navigateToVehiclesForm}
               >
-                  Add a vehicle
-              </button></div>
+                Add a vehicle
+              </button>
+            </div>
             <div className="tableContentVehicles">
               <VehiclesTablePage />
             </div>

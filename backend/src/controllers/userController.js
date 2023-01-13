@@ -17,14 +17,14 @@ const getUsers = (req, res) => {
 
 const getUserById = (req, res) => {
   model
-      .find(req.params.id)
-      .then((result) => {
-        res.send(result);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
-      });
+    .find(req.params.id)
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 };
 
 const updateUser = (req, res) => {
@@ -34,14 +34,14 @@ const updateUser = (req, res) => {
     id,
   };
   model
-      .update(user)
-      .then((result) => {
-        res.send(result);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
-      });
+    .update(user)
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 };
 
 module.exports = { getUsers, getUserById, updateUser };

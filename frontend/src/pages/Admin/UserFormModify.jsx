@@ -26,7 +26,6 @@ export default function UserFormModify() {
   };
 
   const handleSubmit = (event) => {
-    console.log(user);
     event.preventDefault();
     // const data = event.target.value;
     fetch(`${ApiBaseUrL}/car/${id}`, {
@@ -121,16 +120,22 @@ export default function UserFormModify() {
             />
             <div className="titleField">Mail</div>
             <input
-                className="form"
-                form
-                type="text"
-                name="mail"
-                placeholder="Email"
-                value={user.mail}
-                onChange={handleChange}
+              className="form"
+              form
+              type="text"
+              name="mail"
+              placeholder="Email"
+              value={user.mail}
+              onChange={handleChange}
             />
             <div className="tableTitleVehicles">Ecological behaviour</div>
-            <div className="ecoCoeff"><img src={feuilleGreen}/><img src={feuilleGreen}/><img src={feuilleGreen}/><img src={feuilleGrey}/><img src={feuilleGrey}/></div>
+            <div className="ecoCoeff">
+              <img alt="feuille eco" src={feuilleGreen} />
+              <img alt="feuille eco" src={feuilleGreen} />
+              <img alt="feuille eco" src={feuilleGreen} />
+              <img alt="feuille eco" src={feuilleGrey} />
+              <img alt="feuille eco" src={feuilleGrey} />
+            </div>
             <div className="tableTitleVehicles">Picture</div>
           </div>
         </div>
