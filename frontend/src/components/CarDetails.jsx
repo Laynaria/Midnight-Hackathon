@@ -13,7 +13,7 @@ export default function CarDetails({
   const [vehicleImg, setVehicleImg] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/images/${elem.id}`)
+    fetch(`http://localhost:5501/images/${elem.id}`)
       .then((response) => response.json())
       .then((data) => {
         setVehicleImg(data[0][0].name);
@@ -37,7 +37,7 @@ export default function CarDetails({
                 className="text-green-600 text-sm mr-2"
                 icon={faCheckCircle}
               />{" "}
-              Fuel Diesel / 1600 cm3 Engine
+              Fuel electric
             </li>
             <li>
               <FontAwesomeIcon
@@ -67,13 +67,6 @@ export default function CarDetails({
               />{" "}
               Manufacturing Year 2014
             </li>
-            <li>
-              <FontAwesomeIcon
-                className="text-green-600 text-sm mr-2"
-                icon={faCheckCircle}
-              />{" "}
-              5 Doors and Panorama View
-            </li>
           </ul>
           <div className="vehicleDetailFoot">
             <span className="text-2xl font-bold">95 $ </span>
@@ -94,7 +87,7 @@ export default function CarDetails({
         </div>
       </section>
       {searchVehiclesRentDetails[0].passenger > 0 &&
-      +elem.ideal_places - +searchVehiclesRentDetails[0].passenger >= 1 ? (
+      +elem.ideal_places - +searchVehiclesRentDetails[0].passenger >= 2 ? (
         <div className="alertCard">
           <span className="font-bold">Warning:</span> This car does not fit your
           needs. To improve your ecological score, log in to your blablacar

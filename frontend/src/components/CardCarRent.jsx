@@ -7,12 +7,12 @@ export default function CardCarRent({ hundleClick, elem }) {
   const [vehicleImg, setVehicleImg] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/images/${elem.id}`)
+    fetch(`http://localhost:5501/images/${elem.id}`)
       .then((response) => response.json())
       .then((data) => {
         setVehicleImg(data[0][0].name);
       });
-  }, []);
+  }, [elem]);
 
   return (
     <div

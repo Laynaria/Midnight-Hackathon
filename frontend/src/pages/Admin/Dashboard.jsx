@@ -15,20 +15,20 @@ export default function Dashboard() {
         <div className="adminContent">
           <div className="kpiContent">
             <div className="kpiContent1">
-              <div className="kpiContent1Title">Value</div>
-              <div className="kpiContent1Value">45 000€</div>
+              <div className="kpiContent1Title">Booking Monthly</div>
+              <div className="kpiContent1Value">4 890</div>
             </div>
             <div className="kpiContent2">
-              <div className="kpiContent1Title">Value</div>
-              <div className="kpiContent1Value">45 000€</div>
+              <div className="kpiContent1Title">Monthly Revenue</div>
+              <div className="kpiContent1Value">68 000€</div>
             </div>
             <div className="kpiContent3">
-              <div className="kpiContent1Title">Value</div>
-              <div className="kpiContent1Value">45 000€</div>
+              <div className="kpiContent1Title">New Costumers</div>
+              <div className="kpiContent1Value"> 8 500</div>
             </div>
             <div className="kpiContent4">
-              <div className="kpiContent1Title">Value</div>
-              <div className="kpiContent1Value">45 000€</div>
+              <div className="kpiContent1Title">Progression</div>
+              <div className="kpiContent1Value">+350%</div>
             </div>
           </div>
           <div className="content">

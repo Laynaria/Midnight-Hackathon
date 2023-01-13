@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import AuthService from "@services/AuthService";
@@ -12,6 +12,7 @@ import backArrow from "@assets/images/backArrow.svg";
 import "@components/Auth/Register.css";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [isShown, setIsShown] = useState(false);
   const [error, setError] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -65,6 +66,7 @@ export default function Register() {
 
     AuthService.register(registerObject).then(() => {
       Notify.success("Account created successfully");
+      navigate("/login");
     });
   };
 

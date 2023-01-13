@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8d16742e-be77-493e-9e36-64f851e50991" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Router/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Router/Router.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/UserFormModify.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/UserFormModify.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleFormModify.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/VehicleFormModify.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/VehiclesAdmin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/VehiclesAdmin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Admin/Dashboard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +71,7 @@
       <workItem from="1673534404666" duration="15142000" />
       <workItem from="1673568255359" duration="775000" />
       <workItem from="1673596170902" duration="3009000" />
+      <workItem from="1673602268819" duration="2607000" />
     </task>
     <servers />
   </component>
