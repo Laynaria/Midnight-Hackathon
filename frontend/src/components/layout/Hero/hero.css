@@ -5,6 +5,7 @@
   background-size: cover;
   gap: 2rem;
   padding-top: 80px;
+  background-attachment: fixed;
 }
 
 .hero h2 {
@@ -72,7 +73,7 @@
 }
 
 .hero input {
-  padding: 0.4rem;
+  padding: 0.6rem;
   color: #000;
 }
 
