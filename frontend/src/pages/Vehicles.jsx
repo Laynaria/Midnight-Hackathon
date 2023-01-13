@@ -29,7 +29,7 @@ export default function Vehicles() {
     setCarCardDetails(rows.filter((e) => e.id === id)[0]);
   };
   useEffect(() => {
-    fetch("http://localhost:5000/car")
+    fetch("http://localhost:5501/car")
       .then((response) => response.json())
       .then((data) => {
         const newArr = data[0]

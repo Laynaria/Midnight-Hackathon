@@ -128,6 +128,7 @@ export default function ContactForm() {
             name="firstname"
             placeholder="Firstname*"
             className={error ? "error" : ""}
+            value={"Antho"}
             onChange={handleChange}
           />
         </label>
@@ -137,6 +138,7 @@ export default function ContactForm() {
             id="lastname"
             name="lastname"
             placeholder="Lastname*"
+            value={"BG"}
             onChange={handleChange}
           />
         </label>
@@ -146,6 +148,7 @@ export default function ContactForm() {
             id="mail"
             name="mail"
             placeholder="Email*"
+            value={"antho@bg.com"}
             onChange={handleChange}
           />
         </label>
@@ -155,6 +158,7 @@ export default function ContactForm() {
             id="address"
             name="address"
             placeholder="Address*"
+            value={"Rue de la Planque"}
             onChange={handleChange}
           />
         </label>
@@ -182,6 +186,7 @@ export default function ContactForm() {
             id="cellphone"
             name="cellphone"
             placeholder="Cellphone*"
+            value={"+33612345678"}
             onChange={handleChange}
           />
         </label>
@@ -192,6 +197,7 @@ export default function ContactForm() {
             name="postalCode"
             placeholder="Zipcode*"
             min="0"
+            value={"13000"}
             onChange={handleChange}
           />
         </label>
@@ -201,6 +207,7 @@ export default function ContactForm() {
             id="city"
             name="city"
             placeholder="City*"
+            value={"Marseille"}
             onChange={handleChange}
           />
         </label>{" "}
