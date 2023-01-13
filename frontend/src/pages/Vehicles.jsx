@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import CarDetails from "@components/CarDetails";
 import Hero from "@components/layout/Hero/Hero";
@@ -20,7 +19,12 @@ export default function Vehicles() {
   const [carId, setCarId] = useState(0);
   const [carCardDetails, setCarCardDetails] = useState([]);
 
+  const [showModals, setShowModals] = useState(false);
+  const setShowModal = () => {
+    setShowModals(!showModals);
+  };
   const hundleClick = (id) => {
+    setShowModals(false);
     setCarId(id);
     setCarCardDetails(rows.filter((e) => e.id === id)[0]);
   };
@@ -34,8 +38,8 @@ export default function Vehicles() {
           )
           .filter(
             (e) =>
-              searchVehiclesRentDetails[0].distance <=
-              e.ideal_distance.split(" to ")[1]
+              +searchVehiclesRentDetails[0].distance <=
+              +e.ideal_distance.split(" to ")[1]
           );
         setRows(newArr);
       });
@@ -44,7 +48,15 @@ export default function Vehicles() {
   return (
     <NavbarLayout>
       <Hero bg={hero2} />
-      {carId > 0 ? <CarDetails elem={carCardDetails} /> : null}
+
+      {carId > 0 ? (
+        <CarDetails
+          searchVehiclesRentDetails={searchVehiclesRentDetails}
+          showModals={showModals}
+          setShowModal={setShowModal}
+          elem={carCardDetails}
+        />
+      ) : null}
       <section className="lastRent">
         <h2>
           Your <span className="text-green-400">Green</span> Search

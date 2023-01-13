@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import axios from "axios";
 import "./hero.css";
 import SearchVehiclesRentContext from "../../../contexts/searchVehiclesRentContext";
@@ -58,7 +58,9 @@ export default function Hero({ bg }) {
   };
 
   const hundleChangePassenger = (e) => {
-    setPassengerForm(e.target.value);
+    if (e.target.value <= 7) {
+      setPassengerForm(e.target.value);
+    }
   };
 
   const hundleClickAddressList = (e) => {
@@ -144,6 +146,7 @@ export default function Hero({ bg }) {
                   id="passenger"
                   name="passenger"
                   placeholder="2"
+                  max="7"
                   onChange={hundleChangePassenger}
                   value={passengerForm}
                 />
@@ -176,7 +179,7 @@ export default function Hero({ bg }) {
           </form>
         </div>
         <div className="card-footer">
-          <Link to="/vehicles">
+          <Link to="/vehicles#findCar">
             <div
               id="findCar"
               role="button"
