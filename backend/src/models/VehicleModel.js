@@ -34,7 +34,7 @@ class VehicleModel {
   update(car) {
     return connection.query(
       `update ${this.table} set brand = ?, matriculation = ?, is_available = ?, type = ?, model = ?, ideal_object = ?, ideal_distance = ?,
-                ideal_places = ?, user_id = ? where id = ?`,
+                ideal_places = ? where id = ?`,
       [
         car.brand,
         car.matriculation,
@@ -44,7 +44,6 @@ class VehicleModel {
         car.ideal_object,
         car.ideal_distance,
         car.ideal_places,
-        car.user_id,
         car.id,
       ]
     );

@@ -28,7 +28,11 @@ const getVehicleById = (req, res) => {
 };
 
 const updateVehicle = (req, res) => {
-  const car = { ...req.body };
+  const { id } = req.params;
+  const car = {
+    ...req.body,
+    id,
+  };
   model
     .update(car)
     .then((result) => {
