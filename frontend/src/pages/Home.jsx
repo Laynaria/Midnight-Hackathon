@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,7 +10,6 @@ import {
   faFlag,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import vehiclesRent from "@assets/data/vehiclesRent.json";
 import NavbarLayout from "@components/layout/NavbarLayout";
 import Hero from "@components/layout/Hero/Hero";
 import CardCarRent from "@components/CardCarRent";
@@ -19,6 +19,16 @@ import car1 from "../assets/images/car1.jpg";
 import "./home.css";
 
 export default function Home() {
+  const [rows, setRows] = React.useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/car")
+      .then((response) => response.json())
+      .then((data) => {
+        const newArr = data[0].filter((e) => +e.is_available === 1);
+        setRows(newArr);
+      });
+  }, []);
+
   return (
     <NavbarLayout>
       {/* <h1 style={{ marginTop: "5rem" }}>This is Home</h1> */}
@@ -67,7 +77,7 @@ export default function Home() {
         <h2>Latest Rental Vehicles</h2>
 
         <div className="lastRentContent">
-          {vehiclesRent.slice(vehiclesRent.length - 3).map((elem) => (
+          {rows.slice(rows.length - 3).map((elem) => (
             <Link to={`/vehicles/${elem.id}`}>
               <CardCarRent elem={elem} />
             </Link>
