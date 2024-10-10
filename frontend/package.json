@@ -19,7 +19,7 @@
     "@lottiefiles/react-lottie-player": "^3.5.0",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
-    "axios": "^1.6.0",
+    "axios": "^1.7.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-calendar": "^4.0.0",
